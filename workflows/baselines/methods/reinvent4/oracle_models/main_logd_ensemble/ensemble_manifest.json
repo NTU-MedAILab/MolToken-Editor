@@ -1,0 +1,100 @@
+{
+  "ensemble_size": 10,
+  "chemprop_generation": "v2",
+  "molecule_featurizer": "RDKit2D",
+  "molecule_feature_dimension": 217,
+  "upload_order_confirmed_by_user": true,
+  "mapping_rule": "best(1)-best(5): random seeds ascending; best(6)-best(10): scaffold seeds ascending",
+  "load_validation": {
+    "passed": true,
+    "chemprop_version": "2.2.3",
+    "torch_version": "2.13.0+cu130",
+    "loaded_models": 10,
+    "all_single_task": true,
+    "output_columns": ["exp"],
+    "all_rdkit2d_217": true,
+    "parameter_count_per_model": 473701
+  },
+  "models": [
+    {
+      "upload_name": "best(1).pt",
+      "split": "random",
+      "seed": 20260528,
+      "target_name": "main_logd_random_seed_20260528.pt",
+      "size_bytes": 1914170,
+      "sha256": "bd76c8192d6450d3f97ed9b43f6711ce1831d07fcf44360f6d5424c657931508"
+    },
+    {
+      "upload_name": "best(2).pt",
+      "split": "random",
+      "seed": 20260529,
+      "target_name": "main_logd_random_seed_20260529.pt",
+      "size_bytes": 1914170,
+      "sha256": "c68a4aa6277de242c509b977aa8be94fefb553b17968348ddb5e91c0f5c3278e"
+    },
+    {
+      "upload_name": "best(3).pt",
+      "split": "random",
+      "seed": 20260530,
+      "target_name": "main_logd_random_seed_20260530.pt",
+      "size_bytes": 1914170,
+      "sha256": "0cf5ea625457da2a65bd97ad61dfebbfb0674b1cad67f8395ad3e886119e1153"
+    },
+    {
+      "upload_name": "best(4).pt",
+      "split": "random",
+      "seed": 20260531,
+      "target_name": "main_logd_random_seed_20260531.pt",
+      "size_bytes": 1914170,
+      "sha256": "4a8696f0289059f86883f7c4f525378c8c881742aee6f7063f152603f4c4fd47"
+    },
+    {
+      "upload_name": "best(5).pt",
+      "split": "random",
+      "seed": 20260601,
+      "target_name": "main_logd_random_seed_20260601.pt",
+      "size_bytes": 1914170,
+      "sha256": "fdb57983fe2f38ac6beb937930b512866ab92d8a119c3a6cceb06f7a010ad3ea"
+    },
+    {
+      "upload_name": "best(6).pt",
+      "split": "scaffold",
+      "seed": 20260528,
+      "target_name": "main_logd_scaffold_seed_20260528.pt",
+      "size_bytes": 1914170,
+      "sha256": "caa36e9fed813514fb7cb72bdf60987dfef95b1c032396c2d3e687dd688c009e"
+    },
+    {
+      "upload_name": "best(7).pt",
+      "split": "scaffold",
+      "seed": 20260529,
+      "target_name": "main_logd_scaffold_seed_20260529.pt",
+      "size_bytes": 1914170,
+      "sha256": "1b2a7cd59bb1a06d41439b869892f5fdda99e3c3fa2627aba39a93390326a368"
+    },
+    {
+      "upload_name": "best(8).pt",
+      "split": "scaffold",
+      "seed": 20260530,
+      "target_name": "main_logd_scaffold_seed_20260530.pt",
+      "size_bytes": 1914170,
+      "sha256": "783603ea45e543b6b1a40f6f61e60363f1a8ae506c674c87e8f9dfc4a31d1f3b"
+    },
+    {
+      "upload_name": "best(9).pt",
+      "split": "scaffold",
+      "seed": 20260531,
+      "target_name": "main_logd_scaffold_seed_20260531.pt",
+      "size_bytes": 1914170,
+      "sha256": "425be7f8e985f9da259b9b7175a2a1f7a4173a9a170625efdb01bbad5d6414b9"
+    },
+    {
+      "upload_name": "best(10).pt",
+      "split": "scaffold",
+      "seed": 20260601,
+      "target_name": "main_logd_scaffold_seed_20260601.pt",
+      "size_bytes": 1914170,
+      "sha256": "91702350819f265eb4aa038f14d5b64f1687f42f1e43e4b34f61ce90effc1225"
+    }
+  ]
+}

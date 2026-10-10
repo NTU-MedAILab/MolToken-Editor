@@ -1,0 +1,77 @@
+{
+  "protocol_name": "phase24_external_single_logd_v2_reinvent88",
+  "status": "locked_before_formal_run; primary_seed_20260703_completed_2026-07-22",
+  "primary_baseline": "REINVENT4-Mol2Mol (mol2mol_mmp prior)",
+  "formal_parent_count": 88,
+  "target_window": {
+    "low": 1.0,
+    "high": 3.4,
+    "inclusive": true
+  },
+  "optimization_objectives": [
+    "main_chemprop_ensemble_predicted_logD_target_window_score"
+  ],
+  "forbidden_reward_terms": [
+    "QED",
+    "SA_score",
+    "Tanimoto_similarity",
+    "structural_alerts",
+    "XGBoost_logD",
+    "random_forest_logD",
+    "OOD_or_uncertainty_filters"
+  ],
+  "downstream_only_metrics": [
+    "QED",
+    "SA_score",
+    "parent_similarity",
+    "validity",
+    "uniqueness",
+    "novelty",
+    "structural_alerts",
+    "XGBoost_logD",
+    "random_forest_logD",
+    "OOD_and_uncertainty",
+    "edit_distance_or_site_recovery_when_applicable"
+  ],
+  "budget": {
+    "moltoken_raw_candidate_attempts": 4446,
+    "moltoken_oracle_scored_edits": 3142,
+    "reinvent_batch_size_per_parent": 1,
+    "reinvent_parent_count": 88,
+    "reinvent_steps": 50,
+    "reinvent_max_raw_sequences": 4400,
+    "raw_attempt_gap_vs_moltoken": 46,
+    "raw_attempt_gap_fraction": 0.010346,
+    "rule": "For Mol2Mol, batch_size is a per-input multiplier. REINVENT raw sequences = parents x batch_size x steps and must not exceed 4446; report both raw attempts and valid oracle-scored molecules."
+  },
+  "random_seeds": {
+    "primary": 20260703,
+    "supplementary_sensitivity": [20260704, 20260705]
+  },
+  "primary_report": {
+    "ranking_unit": "parent",
+    "candidate_cutoffs": [1, 3, 5, 10],
+    "required_metrics": [
+      "final_edit_score",
+      "mean_delta_distance",
+      "strict_success_rate",
+      "target_window_success_rate",
+      "validity",
+      "uniqueness",
+      "novelty"
+    ],
+    "uncertainty": "paired parent bootstrap, 5000 replicates, seed 20260703",
+    "statistical_rule": "paired comparison on the exact REINVENT-vocabulary-compatible common 88-parent set"
+  },
+  "formal_input_candidates": [
+    "../localization/tables/phase19_common_parent_set_v2.csv",
+    "../localization/tables/phase19_common_clean_targets_v2.csv"
+  ],
+  "notes": [
+    "This is a single-target logD experiment. The target interval is part of the logD objective, not a second property objective.",
+    "XGBoost and random forest are independent downstream verification models and must never be included in the REINVENT reward.",
+    "The 120-parent phase10 archive may be used only for source-SMILES recovery and smoke testing, never as an optimization result.",
+    "Before any formal REINVENT optimization result was generated, the user selected protocol A: exclude EXT_05577 ([S+] unsupported) and EXT_06259 (P unsupported) from both methods' paired REINVENT comparison.",
+    "The full 90-parent oracle-equivalence test remains required and passed; the optimization and paired comparison use the locked 88-parent supported subset."
+  ]
+}

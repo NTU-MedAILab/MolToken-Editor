@@ -1,0 +1,30 @@
+# Score the locked parents through the exact component used during RL.
+# Render with scripts/render_oracle_equivalence_config.py.
+run_type = "scoring"
+device = "__DEVICE__"
+json_out_config = "__JSON_CONFIG__"
+
+[parameters]
+smiles_file = "__PARENT_TABLE__"
+smiles_column = "parent_smiles"
+standardize_smiles = false
+output_csv = "__OUTPUT_CSV__"
+
+[scoring]
+type = "arithmetic_mean"
+parallel = 1
+
+[[scoring.component]]
+[scoring.component.MolTokenChemProp2]
+
+[[scoring.component.MolTokenChemProp2.endpoint]]
+name = "main_logD_target_window"
+weight = 1.0
+params.model_path = "__CHEMPROP_ENSEMBLE_DIR__"
+params.expected_models = 10
+transform.type = "double_sigmoid"
+transform.low = 1.0
+transform.high = 3.4
+transform.coef_div = 3.4
+transform.coef_si = 20.0
+transform.coef_se = 20.0

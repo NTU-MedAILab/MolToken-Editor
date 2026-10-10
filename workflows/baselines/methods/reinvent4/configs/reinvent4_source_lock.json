@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/MolecularAI/REINVENT4",
+  "tag": "v4.8",
+  "commit": "80a8d21aefd9c0d3ec806377522effb30cfca12a",
+  "reported_package_version": "4.8.24",
+  "prior": {
+    "name": "mol2mol_mmp.prior",
+    "source": "https://zenodo.org/records/15641297",
+    "md5": "d9051a0309e6a58a0e5262b1ccb39bdf",
+    "sha256": "840dcd7c3ecf2dff999a93315524831e38ef0d0c802857a069d0d961f872f0b1",
+    "size_bytes": 80191445
+  }
+}

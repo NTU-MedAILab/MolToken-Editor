@@ -1,0 +1,93 @@
+{
+  "phase": "phase26_moltoken_b5_candidate_lock",
+  "status": "pass",
+  "budget": 5,
+  "selection_policy": "First B unique, RDKit-valid, single-component, non-parent MolToken candidates in preserved Phase19b pre-score row order; no property-oracle ranking.",
+  "provenance_conclusion": "Phase19c scored rows are a row-preserving extension of Phase19b pre-score rows because all essential identity columns match exactly row by row.",
+  "checks": {
+    "same_full_row_count": true,
+    "cf_row_id_unique": true,
+    "essential_identity_rowwise_match": true,
+    "locked_parent_count": true,
+    "all_parents_support_budget": true,
+    "selected_rows": true,
+    "selected_parent_coverage": true,
+    "exact_budget_per_parent": true,
+    "selected_scored_join_complete": true
+  },
+  "row_alignment": {
+    "full_pre_rows": 17708,
+    "full_scored_rows": 17708,
+    "identity_columns_checked": [
+      "method",
+      "method_group",
+      "edit_action",
+      "mol_id",
+      "token_id",
+      "source_target_token_id",
+      "canonical_smiles",
+      "counterfactual_smiles",
+      "edited_smiles",
+      "replace_direction"
+    ],
+    "identity_match_rates": {
+      "method": 1.0,
+      "method_group": 1.0,
+      "edit_action": 1.0,
+      "mol_id": 1.0,
+      "token_id": 1.0,
+      "source_target_token_id": 1.0,
+      "canonical_smiles": 1.0,
+      "counterfactual_smiles": 1.0,
+      "edited_smiles": 1.0,
+      "replace_direction": 1.0
+    },
+    "cf_row_id_pattern": {
+      "numeric": true,
+      "equals_zero_based_row_index": true,
+      "equals_one_based_row_index": false
+    }
+  },
+  "candidate_pool": {
+    "rows_before_canonical_dedup": 3072,
+    "rows_after_canonical_dedup": 2151,
+    "parents": 88,
+    "minimum_per_parent": 7,
+    "median_per_parent": 26.0,
+    "mean_per_parent": 24.443181818181817,
+    "maximum_per_parent": 34
+  },
+  "selection": {
+    "rows": 440,
+    "parents": 88,
+    "per_parent": 5
+  },
+  "inputs": {
+    "locked_parents": {
+      "path": "workflows/baselines/inputs/common_exact88/phase26_locked_exact88.csv",
+      "sha256": "bdac85a2a8bc211dddb73d567f07e8b2983a9744b87d118eb4cbda3d431658a9"
+    },
+    "prescore_candidates": {
+      "path": "workflows/localization/tables/phase19b_common_budget2_candidates_chemprop_safe.csv",
+      "sha256": "328f73409ab101928d37b4913d4d379da58915f3943ee517668c4d5250757ca2"
+    },
+    "scored_candidates": {
+      "path": "workflows/localization/tables/phase19c_common_budget2_safe_scored_all.csv",
+      "sha256": "fabac644caeae21497725e21376ca89d727ab87902c69c3bd19ca6394aa5779f"
+    }
+  },
+  "outputs": {
+    "selected_prescore": {
+      "path": "workflows/baselines/inputs/budget_lock/moltoken_editor/moltoken_b5_selected_prescore.csv",
+      "sha256": "f575e5689ab516058530d12c71296e88ad6c79e97657b9e86c31ebc60ea54af5"
+    },
+    "selected_scored": {
+      "path": "workflows/baselines/inputs/budget_lock/moltoken_editor/moltoken_b5_selected_scored.csv",
+      "sha256": "aa489d0562416891866a668cf5197eac3dacc41880539556b4c5f42b2163da74"
+    },
+    "counts_by_parent": {
+      "path": "workflows/baselines/inputs/budget_lock/moltoken_editor/moltoken_prescore_unique_valid_counts_by_parent.csv",
+      "sha256": "2664dae4507994589bee95e4843b1596d4f68eadfb3fa0f31b4ad20b8d3f2635"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "prior": "../../priors/mol2mol_mmp.prior",
+  "model_type": "Mol2Mol",
+  "total": 88,
+  "compatible": 88,
+  "incompatible": 0,
+  "coverage": 1.0,
+  "incompatible_parent_ids": [],
+  "audit_table": "phase24_reinvent_vocabulary_audit.csv",
+  "compatible_seed_file": "phase24_reinvent_compatible_seeds.smi",
+  "expected_parents": 88,
+  "formal_full_set_compatible": true
+}

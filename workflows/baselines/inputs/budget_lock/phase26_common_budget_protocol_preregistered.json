@@ -1,0 +1,88 @@
+{
+  "phase": "phase26_common_candidate_budget",
+  "status": "protocol_preregistered_pending_source_audit",
+  "created_at_utc": "2026-07-27T09:57:16.715468+00:00",
+  "benchmark": {
+    "starting_molecules": 88,
+    "target_property": "logD",
+    "target_window": [
+      1.0,
+      3.4
+    ],
+    "common_candidate_budget_per_parent": 5,
+    "top_k": [
+      1,
+      3,
+      5
+    ]
+  },
+  "methods": [
+    "moltoken_editor",
+    "reinvent4_mol2mol",
+    "mmp_transformer_single_logd"
+  ],
+  "candidate_definition": {
+    "rdkit_valid": true,
+    "single_molecule": true,
+    "non_parent": true,
+    "unique_within_parent": true,
+    "canonical_isomeric_smiles_deduplication": true,
+    "selected_before_property_oracle": true
+  },
+  "selection_policy": {
+    "moltoken_editor": {
+      "candidate_pool": "original chemically valid MolToken edits",
+      "order": "pre-oracle generation order; cf_row_id may be used only after provenance verification",
+      "refill": "not applicable unless a predefined deterministic candidate-expansion rule is required"
+    },
+    "reinvent4_mol2mol": {
+      "candidate_pool": "unique valid candidates from the formal seed",
+      "order": "_raw_attempt_index ascending",
+      "refill": "only parents with fewer than five candidates; use derived sub-seeds and retain the first five unique valid candidates without property-oracle selection"
+    },
+    "mmp_transformer_single_logd": {
+      "candidate_pool": "base generation run candidates",
+      "order": "source_run_order then source_rank ascending",
+      "refill": "not used when the base run already provides five unique valid candidates; otherwise apply the same predefined minimal oracle-independent refill rule"
+    }
+  },
+  "evaluation_policy": {
+    "shared_main_predictor": "frozen 10-model Chemprop logD ensemble",
+    "primary_auxiliary_predictor": "XGBoost",
+    "sensitivity_predictor": "RandomForest",
+    "chemical_evaluation": "shared Phase19 evaluation",
+    "topk_ranking": [
+      "target_window_success descending",
+      "relaxed_guardrail_pass descending",
+      "auxiliary_opposition_count ascending",
+      "final_edit_score descending",
+      "canonical SMILES ascending"
+    ]
+  },
+  "stochastic_seeds": {
+    "reinvent4_mol2mol": [
+      20260703,
+      20260704,
+      20260705
+    ],
+    "mmp_transformer_single_logd": [
+      20260703,
+      20260704,
+      20260705
+    ],
+    "moltoken_editor": "deterministic fixed candidate pool"
+  },
+  "seed_handling": "Each stochastic seed is evaluated independently. Candidates from different seeds must not be pooled before Top-K selection.",
+  "reporting": {
+    "primary": "common-budget B=5 comparison",
+    "secondary": "native full-pool comparison",
+    "sensitivity": "optional native-sampler-order and alternative-budget analyses"
+  },
+  "important_prohibitions": [
+    "Do not select the five candidates using logD predictions.",
+    "Do not pool candidates across random seeds.",
+    "Do not duplicate candidates to reach five.",
+    "Do not relax chemical validity after viewing results.",
+    "Do not use the MMP refill-to-50 pool in the common-budget analysis."
+  ]
+}

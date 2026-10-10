@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-07-22T11:47:55.081724+00:00",
+  "formal": true,
+  "protocol": "phase24_external_single_logd_v2_reinvent88",
+  "source_parent_count": 90,
+  "parent_count": 88,
+  "expected_formal_parent_count": 88,
+  "target_window": [
+    1.0,
+    3.4
+  ],
+  "exclusion_decision_timing": "locked before any formal REINVENT optimization output",
+  "excluded_parent_ids": [
+    "EXT_05577",
+    "EXT_06259"
+  ],
+  "excluded_tokens": {
+    "EXT_05577": "[S+]",
+    "EXT_06259": "P"
+  },
+  "parent_table_90": "../formal/phase24_locked_parents_scored.csv",
+  "parent_table_90_sha256": "9b93589dc59523ed8207800bfaedea9e17d45dc597d654ea120d04d438d59806",
+  "vocabulary_audit_90": "../formal/vocabulary_audit/phase24_reinvent_vocabulary_audit.csv",
+  "vocabulary_audit_90_sha256": "9d3fab6082f95eb89fbd595a1fccf9981f8c08c29348fa18976c0cecaa820e59",
+  "locked_table": "phase24_locked_parents.csv",
+  "locked_table_sha256": "bdac85a2a8bc211dddb73d567f07e8b2983a9744b87d118eb4cbda3d431658a9",
+  "reinvent_seed_file": "phase24_reinvent4_seeds.smi",
+  "reinvent_seed_file_sha256": "0092d5e93f8c1b6a2112efcdeaf0a6369e447879a6b9a4b88ff71422cc19ab9a",
+  "exclusions_file": "phase24_reinvent88_exclusions.csv",
+  "exclusions_file_sha256": "8400c2dafd20115668d1cac87345c481c3e48c9e9ef3be68e648a7643dfe7f75"
+}

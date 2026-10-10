@@ -1,0 +1,63 @@
+# REINVENT4 staged-learning baseline for the fixed single-target logD task.
+# Render with scripts/render_reinvent4_config.py. Do not run this template directly.
+
+run_type = "staged_learning"
+device = "__DEVICE__"
+tb_logdir = "__TB_LOGDIR__"
+json_out_config = "__JSON_CONFIG__"
+
+[parameters]
+summary_csv_prefix = "__SUMMARY_PREFIX__"
+use_checkpoint = false
+purge_memories = false
+
+# Mol2Mol MMP prior: local, matched-pair-like structural optimization.
+prior_file = "__MOL2MOL_PRIOR__"
+agent_file = "__MOL2MOL_PRIOR__"
+smiles_file = "__SEED_SMILES_FILE__"
+sample_strategy = "multinomial"
+distance_threshold = 100
+
+# 88 locked parents x 1 sample per parent x 50 steps = 4400 raw attempts.
+# This remains below MolToken-Editor's recorded 4446 raw candidate attempts.
+batch_size = 1
+# The official MMP prior was not trained with randomized input SMILES.
+# Keeping this false avoids an implicit run-time override by REINVENT4.
+randomize_smiles = false
+tb_isim = false
+
+[learning_strategy]
+type = "dap"
+sigma = 128
+rate = 0.0001
+
+[[stage]]
+chkpt_file = "__CHECKPOINT_FILE__"
+termination = "simple"
+max_score = 1.0
+min_steps = 50
+max_steps = 50
+
+[stage.scoring]
+type = "arithmetic_mean"
+
+# The sole optimized property. No QED, SA, similarity, alerts, auxiliary
+# predictors, or OOD terms are permitted in this scoring block.
+[[stage.scoring.component]]
+[stage.scoring.component.MolTokenChemProp2]
+
+[[stage.scoring.component.MolTokenChemProp2.endpoint]]
+name = "main_logD_target_window"
+weight = 1.0
+params.model_path = "__CHEMPROP_ENSEMBLE_DIR__"
+params.expected_models = 10
+
+# Smooth reward centred on the pre-registered desirable logD interval.
+# Raw logD remains available in the REINVENT summary and all final paper
+# metrics are recomputed with the locked MolToken evaluation code.
+transform.type = "double_sigmoid"
+transform.low = 1.0
+transform.high = 3.4
+transform.coef_div = 3.4
+transform.coef_si = 20.0
+transform.coef_se = 20.0
