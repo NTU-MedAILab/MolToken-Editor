@@ -1,0 +1,42 @@
+{
+  "input_tables": {
+    "phase12_definition_audit": "moltoken/tables/moltoken_definition_audit.csv",
+    "phase12_resplit_required": "moltoken/tables/resplit_required_moltokens.csv",
+    "phase10c_quality_table": "moltoken/tables/phase10c_contribution_split_quality_table.csv"
+  },
+  "strict_candidate_rules": {
+    "min_atoms": 2,
+    "max_atoms": 25,
+    "allowed_attachment_counts": [
+      1,
+      2
+    ],
+    "max_boundary_atoms": 3,
+    "max_relative_parent_heavy_atom_fraction": 0.6,
+    "min_split_quality_score": 0.45,
+    "min_main_delta_distance": 0.05,
+    "min_verifier_support_count": 1,
+    "strong_verifier_support_count": 2
+  },
+  "resplit_matching": {
+    "min_jaccard_overlap": 0.5,
+    "max_candidates_per_source_token": 5
+  },
+  "selection_rules": {
+    "max_selected_resplit_per_source_token": 1,
+    "max_selected_recovery_per_parent": 2,
+    "max_refined_tokens_per_parent": 3
+  },
+  "acceptance_gates": {
+    "refined_parent_coverage_min": 0.8,
+    "resolved_resplit_source_rate_min": 0.5,
+    "blocked_text_hit_count_max": 0,
+    "resolved_resplit_source_count_min": 30,
+    "unresolved_resplit_source_count_max": 29,
+    "strict_candidate_pool_min": 0,
+    "strict_candidate_parent_count_min": 0,
+    "refined_main_token_count_min": 0,
+    "mean_selected_token_atoms_max": 999,
+    "selected_verifier_support_rate_min": 0.0
+  }
+}

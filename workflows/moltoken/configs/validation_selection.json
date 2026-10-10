@@ -1,0 +1,29 @@
+{
+  "inputs": {
+    "phase14_token_priority": "moltoken/tables/phase14_token_consensus_priority.csv",
+    "phase14_parent_readiness": "moltoken/tables/phase14_parent_edit_readiness.csv",
+    "phase15_top_edits": "moltoken/tables/phase15_new_channel_top_edits.csv",
+    "phase15_token_summary": "moltoken/tables/phase15_new_channel_token_summary.csv",
+    "phase10d_edit_scored_all": "moltoken/tables/phase10d_edit_scored_all.csv"
+  },
+  "selection_policy": {
+    "existing_readiness_levels": [
+      "ready_strict",
+      "ready_consensus"
+    ],
+    "include_ready_screening_in_backup": true,
+    "include_phase15_best_rank_only": true
+  },
+  "acceptance_gates": {
+    "final_parent_count_min": 30,
+    "strict_final_parent_count_min": 10,
+    "final_guardrail_pass_rate_min": 0.8,
+    "final_consensus_rate_min": 0.5,
+    "blocked_text_hit_count_max": 0,
+    "candidate_master_rows_min": 0,
+    "duplicate_parent_primary_max": 1000000000,
+    "final_strict_rate_min": 0,
+    "new_channel_parent_count_min": 0,
+    "new_channel_strict_parent_count_min": 0
+  }
+}

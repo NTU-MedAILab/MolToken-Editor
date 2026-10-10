@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "refined_moltoken_pool": "moltoken/tables/stage13_refined_moltoken_pool.csv",
+    "phase13_unresolved_sources": "moltoken/tables/unresolved_resplit_sources.csv",
+    "edit_scored_all": "moltoken/tables/phase10d_edit_scored_all.csv"
+  },
+  "accepted_method_groups": [
+    "contribution_primary",
+    "contribution_delete",
+    "contribution_replace",
+    "contribution_add",
+    "property_balanced_sensitivity"
+  ],
+  "acceptance_gates": {
+    "unique_token_edit_evidence_coverage_min": 0.7,
+    "new_channel_edit_evidence_coverage_min": 0.3,
+    "strict_ready_parent_count_min": 20,
+    "blocked_text_hit_count_max": 0,
+    "consensus_ready_parent_count_min": 0,
+    "first_batch_parent_count_min": 0,
+    "refined_token_rows_min": 0
+  }
+}

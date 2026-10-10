@@ -1,0 +1,71 @@
+{
+  "target_window": {
+    "low": 1.0,
+    "high": 3.4
+  },
+  "risk_side_policy": {
+    "high_threshold": 3.4,
+    "low_threshold": 1.0,
+    "in_range_as_edit_target": false,
+    "conflicting_predictors_status": "manual_review"
+  },
+  "hard_filters": {
+    "cuts_ring": false,
+    "max_boundary_atoms_for_auto_target": 3,
+    "max_ambiguous_bit_fraction_for_auto_target": 0.5,
+    "min_token_atoms": 2,
+    "max_token_atoms_for_auto_target": 25,
+    "max_attachment_count_for_auto_target": 3,
+    "require_connected": true,
+    "require_counterfactual_valid_for_grade_a": true
+  },
+  "preferred_ranges": {
+    "token_atoms": [3, 22],
+    "boundary_atoms": [1, 2],
+    "ambiguous_bit_fraction": [0.0, 0.35],
+    "token_confidence_min": 0.6,
+    "nearest_train_tanimoto_min": 0.3
+  },
+  "score_weights": {
+    "contribution_strength": 0.25,
+    "direction_agreement_score": 0.20,
+    "seed_stability_score": 0.15,
+    "boundary_clarity_score": 0.15,
+    "editability_score": 0.15,
+    "specificity_score": 0.10
+  },
+  "penalty_weights": {
+    "ambiguity_penalty": 0.10,
+    "disagreement_penalty": 0.10,
+    "counterfactual_penalty": 0.10,
+    "size_penalty": 0.05,
+    "boundary_penalty": 0.05
+  },
+  "grade_thresholds": {
+    "A": 0.75,
+    "B": 0.60,
+    "C": 0.45
+  },
+  "segmentation_baselines": {
+    "random_connected_subgraph": {
+      "samples_per_molecule": 20,
+      "match_token_size": true,
+      "match_boundary_count": true,
+      "match_ring_status": true
+    },
+    "brics_or_rule_fragment": {
+      "match_size_when_possible": true,
+      "record_jaccard_with_moltoken": true
+    }
+  },
+  "phase05_pass_criteria": {
+    "min_target_moltokens": 40,
+    "min_donor_moltokens": 30,
+    "min_covered_molecules": 50,
+    "max_ring_cut_rate": 0.0,
+    "min_clear_interface_rate": 0.8,
+    "target_table_in_range_count": 0,
+    "require_random_baseline_outperformed": true,
+    "require_all_candidates_reviewed": true
+  }
+}

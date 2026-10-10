@@ -1,0 +1,32 @@
+{
+  "strict_rules": {
+    "min_atoms": 2,
+    "preferred_min_atoms": 3,
+    "preferred_max_atoms": 22,
+    "conditional_max_atoms": 25,
+    "absolute_max_atoms": 30,
+    "max_relative_parent_heavy_atom_fraction": 0.6,
+    "allowed_attachment_counts": [
+      1,
+      2
+    ],
+    "max_boundary_atoms_for_main_evidence": 3,
+    "min_split_quality_score": 0.45,
+    "preferred_split_quality_score": 0.6,
+    "min_main_delta_distance": 0.05,
+    "preferred_main_delta_distance": 0.1,
+    "min_verifier_support_count": 1,
+    "strong_verifier_support_count": 2
+  },
+  "acceptance_gates": {
+    "audited_token_count_min": 200,
+    "primary_keep_count_min": 80,
+    "main_or_conditional_parent_coverage_min": 0.8,
+    "resplit_required_count_max": 80,
+    "exclude_count_max": 30,
+    "mean_relative_size_max": 0.6,
+    "median_n_atoms_max": 22,
+    "primary_mean_split_quality_min": 0.6,
+    "primary_verifier_support_rate_min": 0.95
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "phase13_refined_pool": "moltoken/tables/stage13_refined_moltoken_pool.csv",
+    "phase14_gap_table": "moltoken/tables/phase14_gap_to_next_scoring.csv",
+    "phase10d_donor_library": "moltoken/tables/phase10d_donor_library.csv",
+    "phase10d_linker_library": "moltoken/tables/phase10d_linker_library.csv",
+    "phase14_token_priority": "moltoken/tables/phase14_token_consensus_priority.csv"
+  },
+  "target_rule": {
+    "phase14_readiness": "needs_edit_scoring",
+    "stage13_channels": [
+      "resplit_channel",
+      "coverage_channel"
+    ]
+  },
+  "candidate_generation": {
+    "include_delete": true,
+    "include_replace": true,
+    "include_add": true,
+    "max_reagents_per_token": 10,
+    "max_add_per_parent": 10
+  },
+  "acceptance_gates": {
+    "target_token_count_min": 1,
+    "valid_edit_coverage_min": 0.5,
+    "scored_edit_coverage_min": 0.5,
+    "new_channel_edit_evidence_coverage_after_min": 0.5,
+    "blocked_text_hit_count_max": 0,
+    "candidate_attempts_min": 0,
+    "consensus_success_token_count_min": 0,
+    "strict_success_token_count_min": 0,
+    "target_window_success_token_count_min": 0,
+    "top_edit_guardrail_pass_rate_min": 0
+  }
+}

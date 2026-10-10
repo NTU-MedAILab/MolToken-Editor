@@ -1,0 +1,43 @@
+{
+  "inputs": {
+    "phase16_final_parent_list": "moltoken/tables/phase16_final_parent_validation_list.csv",
+    "phase16_candidate_master": "moltoken/tables/phase16_candidate_master.csv",
+    "phase10_small_library_inventory": "moltoken/tables/phase10_small_library_inventory.csv",
+    "phase10_active_parent_pool": "moltoken/tables/phase10_active_parent_pool.csv"
+  },
+  "endpoint_rules": {
+    "improvement_delta_min": 0.05,
+    "qed_delta_min": -0.15,
+    "sa_delta_max": 1.0,
+    "lipinski_delta_max": 1,
+    "nearest_train_tanimoto_min": 0.3,
+    "nearest_train_tanimoto_max": 0.95,
+    "main_uncertainty_max": 0.35
+  },
+  "bootstrap": {
+    "enabled": true,
+    "n_bootstrap": 1000,
+    "random_seed": 20260528,
+    "seed": 20260528,
+    "iterations": 1000
+  },
+  "property_sensitivity": {
+    "enabled": true
+  },
+  "acceptance_gates": {
+    "final_parent_count_min": 30,
+    "strict_success_rate_min": 0.3,
+    "guardrail_pass_rate_min": 0.8,
+    "blocked_text_hit_count_max": 0,
+    "consensus_rate_min": 0,
+    "duplicate_final_parent_rows_max": 1000000000,
+    "final_library_hit_count_min": 0,
+    "inventory_existing_count_min": 0,
+    "inventory_library_count_min": 0,
+    "new_channel_parent_count_min": 0,
+    "new_channel_strict_count_min": 0,
+    "property_non_degradation_rate_min": 0,
+    "strict_rate_min": 0,
+    "target_window_rate_min": 0
+  }
+}

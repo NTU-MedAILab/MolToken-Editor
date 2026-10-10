@@ -1,0 +1,67 @@
+{
+  "phase": "moltoken",
+  "source_libraries": {
+    "mini_library_manifest": "../data/external/library_manifest.csv",
+    "filtered_external_molecules": "../data/external/molecules_filtered.csv",
+    "mini_library_membership": "../data/external/library_membership.csv"
+  },
+  "parent_candidate_filters": {
+    "require_filter_pass": true,
+    "mw_min": 180,
+    "mw_max": 650,
+    "heavy_atoms_min": 12,
+    "heavy_atoms_max": 55,
+    "qed_min": 0.25,
+    "rotbonds_max": 14,
+    "tpsa_max": 170,
+    "allowed_molecule_type": "Small molecule"
+  },
+  "predictor_screening": {
+    "main_predictor": "dmpnn_rdkit2d",
+    "target_window_low": 1.0,
+    "target_window_high": 3.4,
+    "active_distance_min": 0.2,
+    "tier_a_active_distance_min": 0.3,
+    "preferred_active_parent_count": 120,
+    "minimum_active_parent_count": 100,
+    "low_side_fraction_min": 0.3,
+    "high_side_fraction_min": 0.3,
+    "nearest_train_tanimoto_min": 0.3,
+    "preferred_nearest_train_tanimoto_min": 0.4,
+    "prediction_uncertainty_max": 0.35,
+    "max_molecules_per_murcko_scaffold": 2,
+    "max_molecules_per_mini_library": 3,
+    "require_parent_library_mapping": true,
+    "exact_train_overlap_tanimoto_max": 0.95,
+    "auxiliary_verifier_required_for_tier_a": true
+  },
+  "moltoken_screening": {
+    "allowed_attachment_counts": [
+      1,
+      2
+    ],
+    "min_split_quality_score": 0.45,
+    "prefer_split_quality_grades": [
+      "A",
+      "B"
+    ],
+    "exclude_ring_cut": true,
+    "max_tokens_per_parent": 2
+  },
+  "acceptance_gates": {
+    "library_count_min": 100,
+    "parent_candidate_count_min": 2500,
+    "screened_active_parent_count_min": 100,
+    "screened_tier_a_parent_count_min": 12,
+    "screened_active_low_fraction_min": 0.3,
+    "screened_active_high_fraction_min": 0.3,
+    "screened_active_nearest_train_tanimoto_mean_min": 0.4,
+    "screened_active_prediction_uncertainty_mean_max": 0.3,
+    "active_moltoken_count_min": 200,
+    "active_moltoken_valid_edit_coverage_min": 0.8,
+    "paired_method_parent_count_min": 15,
+    "active_top5_mean_delta_advantage_min": 0.05,
+    "active_top5_alert_rate_max": 0.0,
+    "active_top5_relaxed_guardrail_pass_rate_min": 0.8
+  }
+}
