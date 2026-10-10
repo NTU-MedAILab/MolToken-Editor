@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+.venv/
+.mplconfig/
+run_logs/
+runs/
+
+# Recreated training and prediction artifacts
+workflows/**/models/
+workflows/**/checkpoints/
+workflows/**/lightning_logs/
+workflows/**/predictions/
+workflows/**/features/
+workflows/**/reports/
+workflows/**/tables/
+*.ckpt
+*.pt
+*.pth
+*.joblib
+
+# Downloaded third-party assets
+workflows/baselines/methods/reinvent4/priors/
+workflows/baselines/methods/reinvent4/logs/
+workflows/baselines/methods/reinvent4/outputs/
+workflows/baselines/methods/mmp_transformer/external/
+workflows/baselines/methods/mmp_transformer/models/
+workflows/baselines/methods/mmp_transformer/logs/
+workflows/baselines/methods/mmp_transformer/outputs/
