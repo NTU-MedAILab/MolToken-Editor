@@ -1,0 +1,5 @@
+# Keep scientific tables byte-stable across platforms.
+data/**/*.csv -text -diff
+results/**/*.csv -text -diff
+workflows/baselines/inputs/**/*.csv -text -diff
+workflows/ablation/inputs/*.csv.gz -text -diff
