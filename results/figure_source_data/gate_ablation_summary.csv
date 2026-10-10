@@ -1,0 +1,5 @@
+variant,accepted_candidates,candidate_accept_rate_fixed_budget,parents_with_any_accept,parent_accept_rate,additional_candidates_vs_full,additional_parents_vs_full,evidence_ready_rate_among_accepted,verifier_consensus_rate_among_accepted,guardrail_pass_rate_among_accepted,alert_free_rate_among_accepted,ood_free_rate_among_accepted
+full_all_gates,131,0.29772727272727273,51,0.5795454545454546,0,0,1.0,1.0,1.0,1.0,1.0
+without_verifier_consensus,178,0.40454545454545454,70,0.7954545454545454,47,19,1.0,0.7359550561797753,1.0,1.0,1.0
+without_evidence_safety_gate,253,0.575,66,0.75,122,15,0.5177865612648221,1.0,0.5335968379446641,0.9565217391304348,0.7786561264822134
+property_window_only,340,0.7727272727272727,87,0.9886363636363636,209,36,0.5235294117647059,0.7441176470588236,0.538235294117647,0.9647058823529412,0.7852941176470588

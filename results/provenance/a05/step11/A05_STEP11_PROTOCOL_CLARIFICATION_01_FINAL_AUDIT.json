@@ -1,0 +1,40 @@
+{
+  "status": "pass",
+  "stage": "A05_STEP11_PROTOCOL_CLARIFICATION_01_FINAL",
+  "clarification_status": "CLOSED",
+  "reason": "Observed-only means are mathematically undefined for zero-filled parent-seed-method cells.",
+  "full_parent_count": 65,
+  "seed_count": 5,
+  "parent_seed_method_cells": 650,
+  "undefined_observed_only_cells": 48,
+  "paired_parent_seed_rows_total": 325,
+  "paired_parent_seed_rows_observed_complete": 292,
+  "paired_parent_seed_rows_observed_incomplete": 33,
+  "all_five_seed_observed_complete_parents": 58,
+  "all_five_seed_observed_incomplete_parents": 7,
+  "full_cohort_primary_endpoints": [
+    "target_window_hit_rate_B5",
+    "strict_success_rate_B5"
+  ],
+  "distance_endpoint_full_cohort_status": "NOT_ESTIMABLE",
+  "distance_endpoint_followup_status": "COMPLETE_OBSERVATION_SENSITIVITY_ONLY",
+  "final_edit_score_followup_status": "COMPLETE_OBSERVATION_SENSITIVITY_OR_DESCRIPTIVE",
+  "numerical_imputation_used": false,
+  "individual_seeds_dropped": false,
+  "parent_seed_rows_silently_dropped": false,
+  "effect_values_used_to_choose_policy": false,
+  "bootstrap_run": false,
+  "models_run": false,
+  "candidates_rescored": false,
+  "B5_selection_rerun": false,
+  "step9b_modified": false,
+  "step10_modified": false,
+  "next_stage": "A05_STEP11_V2_PAIRED_OUTCOME_ANALYSIS",
+  "source_hashes": {
+    "clarification_audit": "2d02136dfe525491c4cc6b5066ead7dd9f2cf6ecbf62dbe4cec019a6151e7e11",
+    "zero_observed_roster": "bf340e7d6b09389a8376953929639bf609cca5dcc075e6b5983123248680e81c",
+    "missing_by_method_seed": "b43db525a6467a25de433b04439c6d93e696cdc166d4f9c971ac3c66893bc09e",
+    "paired_availability": "ddca1505698ee483eee5ceb75fb81f2c2becefd2486d0a9f9e80ea240a43b501",
+    "parent_availability": "af9ea1c33b9d444cfd49213a75e2f014fb82c6d6f0abd9d3574b993c925ffd67"
+  }
+}

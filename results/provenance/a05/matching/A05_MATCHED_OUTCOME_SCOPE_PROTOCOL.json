@@ -1,0 +1,87 @@
+{
+  "status": "PREREGISTERED_AND_LOCKED",
+  "stage": "A05_MATCHED_OUTCOME_SCOPE_LOCK",
+  "analysis_name": "strict_matched_attribution_common_support",
+  "scientific_estimand": "Difference in downstream optimization performance between MolToken attribution-selected regions and strictly matched non-attribution control regions, restricted to the preregistered common-support cohort.",
+  "source_step4_final": "evidence-archive:A05/A05_STEP4_FINAL",
+  "source_step4_final_audit_sha256": "272783171ea80e2fb617f119833dab6cd47345b466b1a8f21cb827452f771963",
+  "source_assignment_sha256": "ad4bece83c41ba2d1feb204f586726e590cb80a91f63b4dd5392840f8db7cca3",
+  "source_matching_protocol_sha256": "b34adc844f7456cf8f5eca46580eb5ce8a2ed6398762ce79d5d959bca0da3199",
+  "original_primary_parents": 90,
+  "original_treated_regions": 178,
+  "matched_common_support_parents": 65,
+  "matched_common_support_treated_regions": 92,
+  "matching_seeds": [
+    20260919,
+    20260920,
+    20260921,
+    20260922,
+    20260923
+  ],
+  "matched_pairs_per_seed": 92,
+  "total_matched_pair_assignments": 460,
+  "primary_statistical_unit": "parent",
+  "region_is_primary_statistical_unit": false,
+  "seed_pair_assignment_is_independent_observation": false,
+  "seed_handling": {
+    "rule": "Each matching seed is a repeated matched-control draw for the same fixed treated common-support cohort.",
+    "seed_specific_results": "report_all_five",
+    "main_combined_analysis": "Within each parent, retain all five seed-specific control results and average the seed-specific paired effect before population-level aggregation.",
+    "forbidden": "Do not treat the 325 parent-seed rows or 460 region-pair rows as independent samples."
+  },
+  "candidate_generation_scope": {
+    "treated_regions": "Only the frozen 92 common-support MolToken treated regions.",
+    "control_regions": "Only the frozen seed-specific controls listed in the 460-row pair roster.",
+    "treated_generation_reuse": "The treated region set is identical across all five seeds and may be generated once and reused.",
+    "control_generation": "Generate the seed-specific matched control regions exactly as frozen; no control substitution.",
+    "generation_context": "isolated_single_physical_region",
+    "edit_interface": "same delete/replace/add builders for treated and control",
+    "fragment_sources": "same frozen donor/linker libraries",
+    "post_match_region_substitution": false
+  },
+  "downstream_evaluation_scope": {
+    "endpoint_budget": "fixed_final_evaluation_slot_B5",
+    "slots_per_parent_method_seed": 5,
+    "candidate_pool_unit": "For a given parent and seed, pool candidates only from that parent's frozen matched regions for the corresponding method.",
+    "shared_pipeline": "Use the same frozen property prediction, filters, ranking, verifier gates, and final-slot selection for treated and control.",
+    "missing_final_slots": "Remain in the B=5 denominator for binary hit-rate endpoints, following the frozen budget protocol.",
+    "metric_formulas": "Use the already frozen downstream metric definitions; this scope lock does not redefine outcome formulas."
+  },
+  "primary_outcomes": [
+    "parent_level_target_window_hit",
+    "parent_level_strict_success",
+    "parent_level_mean_target_distance_improvement"
+  ],
+  "secondary_outcomes": [
+    "candidate_level_target_window_hit",
+    "candidate_level_strict_success",
+    "final_composite_score"
+  ],
+  "primary_inference": {
+    "paired": true,
+    "population": "65 frozen common-support parents",
+    "bootstrap_unit": "parent",
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20260703,
+    "bootstrap_rule": "Resample the 65 parents with replacement. When a parent is sampled, retain all five matching-seed control draws for that parent. Recompute the parent-level seed-averaged paired effect within every bootstrap replicate.",
+    "confidence_interval": "percentile_2.5_97.5",
+    "seed_specific_effects": "report_as_sensitivity"
+  },
+  "forbidden_after_outcome_observation": [
+    "change matched parent population",
+    "change matched treated-region population",
+    "replace selected control regions",
+    "drop a seed because of outcome direction",
+    "relax matching calipers",
+    "retune candidate generation based on outcome",
+    "exclude parents based on optimization success",
+    "treat seeds as independent biological/statistical samples"
+  ],
+  "interpretation_limit": "Attribution-specific conclusions apply only to the strict common-support cohort of 92 treated regions in 65 parents. They must not be generalized numerically to all 178 treated regions or all 90 original parents.",
+  "full_pipeline_analysis_relationship": "The original full MolToken pipeline analysis remains a separate descriptive performance analysis and is not the matched attribution-effect estimate.",
+  "outcome_columns_seen_during_scope_lock": false,
+  "candidate_generation_run_during_scope_lock": false,
+  "prediction_run_during_scope_lock": false,
+  "protocol_relaxation": false,
+  "next_stage": "A05_STEP5_MATCHED_CANDIDATE_GENERATION"
+}

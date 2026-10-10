@@ -1,0 +1,13 @@
+baseline,baseline_label,metric,paired_parents,mean_diff,ci95_low,ci95_high,ci_excludes_zero_observed,ci_excludes_zero_expected,match
+rgroup_enumeration,R-group,main_delta_distance_edit,81,0.05390981795197534,0.021644267507638926,0.08894742420101852,True,True,True
+rgroup_enumeration,R-group,target_window_success,81,0.12345679012345678,0.05185185185185184,0.1962962962962963,True,True,True
+rgroup_enumeration,R-group,strict_success,81,0.08271604938271604,0.019753086419753076,0.14938271604938272,True,True,True
+rgroup_enumeration,R-group,final_edit_score,81,0.04960518497078628,0.020923271693653364,0.07855708745246595,True,True,True
+brics_edit,BRICS,main_delta_distance_edit,81,0.08105422048086419,0.026928063885123452,0.15083744806526228,True,True,True
+brics_edit,BRICS,target_window_success,81,0.07469135802469137,0.0055555555555555575,0.1432098765432099,True,True,True
+brics_edit,BRICS,strict_success,81,0.04938271604938271,-0.007407407407407406,0.1111111111111111,False,False,True
+brics_edit,BRICS,final_edit_score,81,0.037263787604384965,0.006790020941681377,0.06990049077482342,True,True,True
+recap_edit,RECAP,main_delta_distance_edit,81,0.07311427125197532,0.02091364226996607,0.13615849926677157,True,True,True
+recap_edit,RECAP,target_window_success,81,0.05061728395061729,-0.014814814814814817,0.11481481481481483,False,False,True
+recap_edit,RECAP,strict_success,81,0.04135802469135803,-0.014814814814814812,0.0962962962962963,False,False,True
+recap_edit,RECAP,final_edit_score,81,0.0270627793744846,-0.0011723315662423071,0.05526231003434768,False,False,True

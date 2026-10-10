@@ -1,0 +1,26 @@
+name: moltoken
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.10
+  - pip
+  - rdkit
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - joblib
+  - tqdm
+  - pyyaml
+  - openpyxl
+  - pip:
+      - chemprop==2.2.3
+      - descriptastorus
+      - xgboost
+      - lightning
+      - pytorch-lightning
+      - torch
+      - torchmetrics

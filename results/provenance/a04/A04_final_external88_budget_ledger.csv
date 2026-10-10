@@ -1,0 +1,8 @@
+method,seed,parents,raw_attempt_rows,valid_rows,duplicate_rows,unique_parent_candidate_pairs,requested_final_slots,observed_locked_slots,missing_final_slots,shared_endpoint_scored_rows,shared_endpoint_fraction_of_raw_attempts,main_model_calls_available,aux_model_calls_available,native_model_calls_available,native_generation_wall_seconds,native_generation_wall_time_available,whole_process_wall_time_available
+mmp_transformer_single_logd,20260703,88,4400,4400,0,4400,440,440,0,440,0.1,False,False,False,,False,False
+mmp_transformer_single_logd,20260704,88,3610,3610,0,3610,440,440,0,440,0.12188365650969529,False,False,False,,False,False
+mmp_transformer_single_logd,20260705,88,3577,3577,0,3577,440,440,0,440,0.12300810735253005,False,False,False,,False,False
+moltoken_editor,deterministic,88,4360,3072,921,2151,440,440,0,440,0.10091743119266056,False,False,False,,False,False
+reinvent4_mol2mol,20260703,88,4400,4361,2619,1742,440,440,0,440,0.1,False,False,False,945.574259,True,False
+reinvent4_mol2mol,20260704,88,4400,4347,2339,2008,440,440,0,440,0.1,False,False,False,944.56179,True,False
+reinvent4_mol2mol,20260705,88,4400,4351,2325,2026,440,438,2,438,0.09954545454545455,False,False,False,917.07938,True,False

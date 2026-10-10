@@ -1,0 +1,5 @@
+analysis,cohort,endpoint,treated,control,treated_minus_control,ci95_low,ci95_high,reporting_note
+Primary,65 parents × 5 seeds,Target-window hit rate (B=5),0.7538461538461538,0.6523076923076923,0.1015384615384615,0.0313846153846153,0.1741692307692305,Full-cohort primary paired analysis
+Primary,65 parents × 5 seeds,Strict success rate (B=5),0.64,0.579076923076923,0.0609230769230769,0.0055384615384615,0.1212307692307692,Full-cohort primary paired analysis
+Sensitivity,58 complete-observation parents × 5 seeds,Mean target-distance improvement,1.323665597161207,1.20776040884546,0.1159051883157471,0.0459695408113534,0.1990871730196435,Complete-observation sensitivity; not full-cohort primary
+Sensitivity,58 complete-observation parents × 5 seeds,Mean final edit score,0.7896358537816309,0.7324499132138149,0.0571859405678161,0.0214502845027644,0.095920226276606,Complete-observation sensitivity/descriptive

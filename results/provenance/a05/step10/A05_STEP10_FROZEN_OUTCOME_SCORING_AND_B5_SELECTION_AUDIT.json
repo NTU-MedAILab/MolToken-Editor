@@ -1,0 +1,101 @@
+{
+  "status": "pass",
+  "stage": "A05_STEP10_FROZEN_OUTCOME_SCORING_AND_B5_SELECTION",
+  "implementation_version": "v2_region_identity_clarification_applied",
+  "source_step8_status": "CLOSED",
+  "source_step9b_status": "CLOSED",
+  "candidate_rows": 5781,
+  "scored_candidate_rows": 5781,
+  "scored_candidate_row_order_exact": true,
+  "matched_pair_assignments": 460,
+  "parent_seed_scope_rows": 325,
+  "candidate_seed_assignment_rows": 19920,
+  "candidate_seed_assignment_unique": true,
+  "roster_join_identity_used": [
+    "mol_id",
+    "a05_source_region_key",
+    "treated/control label"
+  ],
+  "composite_physical_identity_validated": [
+    "mol_id",
+    "a05_source_region_key",
+    "a05_physical_region_id"
+  ],
+  "physical_identity_formula": "a05_physical_region_id = mol_id + '::' + a05_source_region_key",
+  "region_identity_clarification_required": true,
+  "region_key_only_join_used": false,
+  "source_labels": [
+    "treated",
+    "control"
+  ],
+  "descriptor_panel_computed": true,
+  "historical_add_scoring_columns_called_once": true,
+  "formula_checks": {
+    "target_window_success_exact": true,
+    "evidence_ready_exact": true,
+    "consensus_success_exact": true,
+    "strict_success_exact": true,
+    "all_required_numeric_outcomes_complete_finite": true,
+    "final_edit_score_in_unit_interval": true
+  },
+  "selection": {
+    "budget": "B5",
+    "slots_per_parent_method_seed": 5,
+    "grid_rows": 3250,
+    "parent_seed_method_groups": 650,
+    "eligibility": "edit_valid AND edited_main_pred non-null AND evidence_ready",
+    "fallback_used": false,
+    "missing_slots_backfilled": false,
+    "binary_missing_slots_counted_as_failure": true,
+    "group_structure": [
+      {
+        "method_label": "control",
+        "grid_rows": 1625,
+        "filled_slots": 1442,
+        "missing_slots": 183,
+        "parent_seed_groups": 325
+      },
+      {
+        "method_label": "treated",
+        "grid_rows": 1625,
+        "filled_slots": 1455,
+        "missing_slots": 170,
+        "parent_seed_groups": 325
+      }
+    ]
+  },
+  "method_specific_metrics_computed": true,
+  "treated_control_difference_computed": false,
+  "parent_five_seed_average_computed": false,
+  "bootstrap_run": false,
+  "models_loaded": false,
+  "chemprop_run": false,
+  "xgboost_run": false,
+  "random_forest_run": false,
+  "protected_frozen_directories_unchanged": true,
+  "runtime_only_import_path_fix_applied": true,
+  "source_files_modified": false,
+  "source_hashes": {
+    "A05_step8_candidates_with_frozen_predictions.csv": "7731de3530b58bfc3a630252feec8508f641ae3ce3d3783aa58f3b2822d980d6",
+    "A05_STEP8_FINAL_AUDIT.json": "788ef61c0f0b23e6a1b488a471a9f56388aa4c31be95cc76a7b4e98715360ace",
+    "A05_STEP8_FINAL_SHA256SUMS.txt": "f201fe9f779acb815a1d85ac6ba7081d8d095718ef2f3dc539b6dcb144b350fd",
+    "A05_STEP9B_FINAL_AUDIT.json": "c9a71edaf9037770fd8e3a791cb8fad02d34a265e18bc13c32da025f5126fc3d",
+    "A05_STEP9B_FINAL_SHA256SUMS.txt": "e570d90fb308a8c8fcc8511a4eb302a7b190dfe186e402ce6ef1695875dc7943",
+    "A05_step9b_locked_outcome_analysis_protocol.json": "fd59dea40af372a87e47bdcc6e15eec159a17f302f60d358c846193882408036",
+    "A05_frozen_seed_pair_roster_460.csv": "7eee008b3ae32a9d3084b690c1c7a02e56f545ba9a5c67e3e2060cc048dda8f8",
+    "A05_STEP9B_REGION_IDENTITY_CLARIFICATION_AUDIT.json": "e7843f43633533d7f089e6b448cf861d200fff14c53e98f74eb2ce3f43ad4412",
+    "A05_step9b_region_identity_clarification_contract.json": "89481f0e77f21888a717387045031547a1aa7b29da3d5f8c1fcdc497bcd5f9f5",
+    "A05_STEP9B_REGION_IDENTITY_CLARIFICATION_SHA256SUMS.txt": "f57686cbf2b5be5b6601d3f7a8c1b4928ad240b482824d880a04fca997b7aec7",
+    "run_phase10d_edit_generation_scoring.py": "471fe0fc3a7b3296792a3594ac97a7c93d5e79ca093239259a837135f708a7f9",
+    "train.csv": "7010f39cc3c90a4b91c5313e9210219e94c627abf8c59a5b9df694bf7b008983",
+    "scaffold_train.csv": "c12bff135da8599c20123acfd806a6ff30266c9c7070ad6ad7a001a7307c4871"
+  },
+  "output_hashes": {
+    "scored_candidates": "e9982f3c5c58edff6689c8c6c6379a4a336452f6cf805255d7510ae36dddf282",
+    "candidate_seed_assignment_pool": "48ca30e58a9ec60735cfeba01bcd2b1b65c3a34d5ef964a49d7d4781a2683631",
+    "B5_final_slots": "a905b0fed58cbdb6ff8396fff548d96088049337cea32d5bfeef7e8be6fa2b6a",
+    "parent_seed_method_B5_metrics": "ddba8ecba8922c667845b13c83604e714e17f6320b4ef419b51573a3f6f1e48e",
+    "execution_record": "4013286bdf8108656cabaf84131808ed4505f2682bff1ca98edd9664b753368a"
+  },
+  "next_stage": "A05_STEP10_FINAL_FREEZE"
+}

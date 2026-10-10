@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "stage": "A05_STEP10_FINAL",
+  "step10_status": "CLOSED",
+  "implementation_version": "v2_region_identity_clarification_applied",
+  "candidate_rows": 5781,
+  "candidate_seed_assignment_rows": 19920,
+  "eligible_candidate_seed_rows": 9832,
+  "fixed_B5_grid_rows": 3250,
+  "selected_candidate_rows": 2897,
+  "missing_B5_slot_rows": 353,
+  "parent_seed_method_groups": 650,
+  "parent_seed_method_metric_rows": 650,
+  "B5_structure": [
+    {
+      "method_label": "control",
+      "grid_rows": 1625,
+      "filled_slots": 1442,
+      "missing_slots": 183,
+      "parent_seed_groups": 325
+    },
+    {
+      "method_label": "treated",
+      "grid_rows": 1625,
+      "filled_slots": 1455,
+      "missing_slots": 170,
+      "parent_seed_groups": 325
+    }
+  ],
+  "composite_physical_identity_exact": true,
+  "region_key_only_join_used": false,
+  "region_identity_clarification_applied": true,
+  "all_scoring_formula_checks_pass": true,
+  "all_filled_slots_evidence_ready": true,
+  "fallback_used": false,
+  "missing_slots_backfilled": false,
+  "binary_missing_slots_counted_as_failure": true,
+  "method_specific_metrics_recomputed_exact": true,
+  "treated_control_difference_computed": false,
+  "parent_five_seed_average_computed": false,
+  "bootstrap_run": false,
+  "models_loaded_during_step10": false,
+  "models_run_during_step10": false,
+  "protected_prior_sources_unchanged": true,
+  "source_hashes": {
+    "step10_build_audit": "8826aff1a1865578eb640685b7bae0d4b8eec03b3c009c149ece7e9024e98764",
+    "step10_build_manifest": "66ecfc96a92771f9f9f7444c00af0958323bc45a5565350c2a9246fc14b8e92c",
+    "scored_candidates": "e9982f3c5c58edff6689c8c6c6379a4a336452f6cf805255d7510ae36dddf282",
+    "candidate_seed_assignment_pool": "48ca30e58a9ec60735cfeba01bcd2b1b65c3a34d5ef964a49d7d4781a2683631",
+    "B5_final_slots": "a905b0fed58cbdb6ff8396fff548d96088049337cea32d5bfeef7e8be6fa2b6a",
+    "parent_seed_method_B5_metrics": "ddba8ecba8922c667845b13c83604e714e17f6320b4ef419b51573a3f6f1e48e",
+    "execution_record": "4013286bdf8108656cabaf84131808ed4505f2682bff1ca98edd9664b753368a"
+  },
+  "next_stage": "A05_STEP11_PAIRED_PARENT_FIVE_SEED_OUTCOME_ANALYSIS"
+}

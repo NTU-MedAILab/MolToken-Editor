@@ -1,0 +1,12 @@
+{
+  "development120": 120,
+  "localization90": 90,
+  "common81": 81,
+  "exact88": 88,
+  "90_subset_120": true,
+  "81_subset_90": true,
+  "88_subset_90": true,
+  "81_intersection_88": 79,
+  "90_minus_88": 2,
+  "90_minus_81": 9
+}

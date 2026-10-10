@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "stage": "A05_STEP11_V2_INDEPENDENT_RECALC_AUDIT",
+  "recomputed_directly_from": "A05_STEP10_FINAL/A05_step10_B5_final_slots_3250.csv",
+  "B5_rows": 3250,
+  "parent_seed_method_groups": 650,
+  "fixed_B5_denominator": 5,
+  "primary_parents": 65,
+  "primary_parent_seed_pairs": 325,
+  "sensitivity_complete_parents": 58,
+  "sensitivity_parent_seed_pairs": 290,
+  "step10_metrics_exactly_reconstructed": true,
+  "primary_parent_effects_reconstructed": true,
+  "sensitivity_parent_effects_reconstructed": true,
+  "complete58_roster_reconstructed_from_observation_availability": true,
+  "bootstrap_values_reconstructed": true,
+  "summary_values_reconstructed": true,
+  "contrast_treated_minus_control_verified": true,
+  "unfilled_slots_counted_as_failures_for_fixed_B5_binary_endpoints": true,
+  "observed_only_nan_imputation_used": false,
+  "models_run": false,
+  "candidate_rescoring_run": false,
+  "B5_selection_rerun": false,
+  "step10_modified": false,
+  "step11_v2_modified": false,
+  "bootstrap": {
+    "unit": "parent",
+    "replicates": 5000,
+    "seed": 20260703
+  },
+  "source_hashes": {
+    "B5": "a905b0fed58cbdb6ff8396fff548d96088049337cea32d5bfeef7e8be6fa2b6a",
+    "Step10_metrics": "ddba8ecba8922c667845b13c83604e714e17f6320b4ef419b51573a3f6f1e48e",
+    "Step11_v2_audit": "6f7d8507b51490e88a78993388b8d8fe946f3ce189022e272bc526be3ce6f81d",
+    "clarification_audit": "a386572a7e59f7b485fb88e3b9058acd2fb521b49a174e6cd13448eadb6ab215"
+  },
+  "next_stage": "FREEZE_A05_STEP11_V2"
+}

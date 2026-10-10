@@ -1,0 +1,16 @@
+chemprop==2.2.3
+descriptastorus
+rdkit
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+joblib
+tqdm
+xgboost
+lightning
+pytorch-lightning
+torch
+torchmetrics
+openpyxl

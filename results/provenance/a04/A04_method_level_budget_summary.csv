@@ -1,0 +1,4 @@
+method,seed_groups,raw_attempt_rows,raw_attempt_min,raw_attempt_max,raw_attempt_mean,requested_final_slots_per_seed,observed_locked_slots,total_missing_final_slots,shared_endpoint_only_on_final_locked_layer,main_model_calls_complete,aux_model_calls_complete,native_model_calls_complete,native_wall_time_observations,native_wall_time_mean_seconds,native_wall_time_sd_seconds,whole_process_runtime_complete
+mmp_transformer_single_logd,3,4400|3610|3577,3577,4400,3862.3333333333335,440,440|440|440,0,True,False,False,False,0,,,False
+moltoken_editor,1,4360,4360,4360,4360.0,440,440,0,True,False,False,False,0,,,False
+reinvent4_mol2mol,3,4400|4400|4400,4400,4400,4400.0,440,440|440|438,2,True,False,False,False,3,935.7384763333333,16.167179109277214,False

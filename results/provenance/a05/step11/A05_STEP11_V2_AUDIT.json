@@ -1,0 +1,68 @@
+{
+  "status": "pass",
+  "stage": "A05_STEP11_V2_PAIRED_OUTCOME_ANALYSIS",
+  "source_step10_status": "CLOSED",
+  "source_clarification_status": "CLOSED",
+  "contrast": "treated_minus_control",
+  "primary_statistical_unit": "parent",
+  "seed_is_independent_observation": false,
+  "region_is_independent_observation": false,
+  "candidate_is_independent_observation": false,
+  "primary_full_cohort": {
+    "parent_count": 65,
+    "seeds_per_parent": 5,
+    "parent_seed_pairs": 325,
+    "endpoints": [
+      "target_window_hit_rate_B5",
+      "strict_success_rate_B5"
+    ],
+    "all_five_seeds_retained": true
+  },
+  "observed_only_sensitivity": {
+    "parent_count": 58,
+    "excluded_parent_count": 7,
+    "seeds_per_parent": 5,
+    "parent_seed_pairs": 290,
+    "endpoints": [
+      "mean_target_distance_improvement_observed",
+      "mean_final_edit_score_observed"
+    ],
+    "cohort_selection_basis": "Frozen all-five-seed observed-availability indicator only; no effect magnitude used.",
+    "distance_endpoint_label": "complete-observation sensitivity; not the full-cohort primary estimand",
+    "all_five_seeds_retained": true
+  },
+  "bootstrap": {
+    "unit": "parent",
+    "replicates": 5000,
+    "seed": 20260703,
+    "interval": "percentile_2.5_97.5",
+    "common_resampling_matrix_within_primary_family": true,
+    "common_resampling_matrix_within_sensitivity_family": true,
+    "single_common_matrix_across_both_cohorts": false,
+    "reason_matrices_differ": "Primary and observed-only sensitivity cohorts contain different parent counts."
+  },
+  "numerical_imputation": false,
+  "individual_seed_dropping": false,
+  "parent_seed_row_dropping_inside_selected_cohort": false,
+  "p_values_computed": false,
+  "multiplicity_adjustment_applied": false,
+  "candidate_level_secondary_description_generated": true,
+  "candidate_level_inference_performed": false,
+  "models_loaded": false,
+  "models_run": false,
+  "candidates_rescored": false,
+  "B5_selection_rerun": false,
+  "step9b_modified": false,
+  "step10_modified": false,
+  "clarification_modified": false,
+  "source_hashes": {
+    "step10_metrics": "ddba8ecba8922c667845b13c83604e714e17f6320b4ef419b51573a3f6f1e48e",
+    "step10_B5": "a905b0fed58cbdb6ff8396fff548d96088049337cea32d5bfeef7e8be6fa2b6a",
+    "step10_audit": "d4aee7a6bda2f57ac6c1ac0231d5d232cc5cbfe1e0a264fd01fef8e31faf531e",
+    "step9b_protocol": "fd59dea40af372a87e47bdcc6e15eec159a17f302f60d358c846193882408036",
+    "clarification_final_audit": "a386572a7e59f7b485fb88e3b9058acd2fb521b49a174e6cd13448eadb6ab215",
+    "parent_availability": "af9ea1c33b9d444cfd49213a75e2f014fb82c6d6f0abd9d3574b993c925ffd67",
+    "zero_observed_roster": "bf340e7d6b09389a8376953929639bf609cca5dcc075e6b5983123248680e81c"
+  },
+  "next_stage": "REVIEW_STEP11_V2_RESULTS_BEFORE_FREEZE"
+}

@@ -1,0 +1,160 @@
+{
+  "status": "PREREGISTERED_AND_LOCKED",
+  "stage": "A05_STEP9B_OUTCOME_ANALYSIS_PROTOCOL_LOCK",
+  "analysis_name": "strict_matched_attribution_common_support",
+  "protocol_precedence": [
+    "A05 frozen common-support scope and composite physical identity",
+    "A05 fixed B5 endpoint-budget and parent/seed inference contract",
+    "frozen Phase10-D descriptor/scoring implementation",
+    "historical Phase10-D/Phase19-C ranking helpers only where compatible"
+  ],
+  "analysis_population": {
+    "treated_physical_regions": 92,
+    "parents": 65,
+    "matching_seeds": [
+      20260919,
+      20260920,
+      20260921,
+      20260922,
+      20260923
+    ],
+    "pair_assignments_per_seed": 92,
+    "pair_assignments_total": 460,
+    "physical_region_identity": [
+      "mol_id",
+      "region_key"
+    ],
+    "candidate_identity": "a05_candidate_attempt_id within physical-region identity",
+    "inference_scope": "strict common support only"
+  },
+  "assignment_expansion": {
+    "treated": "join Step8 (mol_id, a05_physical_region_id) to pair-roster (mol_id, treated_region_key) and retain matching_seed",
+    "control": "join Step8 (mol_id, a05_physical_region_id) to pair-roster (mol_id, control_region_key) and retain matching_seed",
+    "method_labels": [
+      "treated",
+      "control"
+    ],
+    "deduplication": "within (mol_id, method_label, matching_seed), retain one copy of each composite physical-region plus a05_candidate_attempt_id identity",
+    "canonical_smiles_deduplication": false
+  },
+  "descriptor_and_scoring": {
+    "implementation": "frozen Phase10-D add_descriptor_panel then add_scoring_columns",
+    "implementation_sha256": "471fe0fc3a7b3296792a3594ac97a7c93d5e79ca093239259a837135f708a7f9",
+    "training_domain": "union of PHASE01/splits/train.csv and PHASE04/splits/scaffold_train.csv, SMILES deduplicated exactly as frozen training_fingerprints",
+    "target_window": {
+      "low": 1.0,
+      "high": 3.4,
+      "inclusive": true,
+      "region_formula": "low if value < 1.0; high if value > 3.4; otherwise in_range",
+      "distance_formula": "max(1.0 - value, 0, value - 3.4)",
+      "constructor_static_source": "TargetWindow(low=1.0, high=3.4)",
+      "import_binding_static_source": [
+        {
+          "source": "phase10d",
+          "statement": "from moltoken_common import TargetWindow, ensure_dirs, morgan_features, rdkit_descriptor_frame",
+          "line": 24
+        },
+        {
+          "source": "quality_tool",
+          "statement": "from moltoken_common import TargetWindow, ensure_dirs, morgan_features, rdkit_descriptor_frame",
+          "line": 18
+        }
+      ]
+    },
+    "direction_threshold_main": 0.05,
+    "direction_threshold_auxiliary": 0.02,
+    "main_improvement_threshold": 0.05,
+    "main_uncertainty_strict_max": 0.35,
+    "ood": "nearest_train_tanimoto_edited < 0.30 or > 0.95, or main uncertainty > 0.35",
+    "guardrail": {
+      "edited_valid": true,
+      "edited_mw_max": 650,
+      "edited_tpsa_max": 160,
+      "edited_hbd_max": 5,
+      "edited_hba_max": 12,
+      "edited_rotbonds_max": 12,
+      "edited_qed_min": 0.35,
+      "edited_sa_score_max": 6.0,
+      "edited_interference_alert": false,
+      "parent_tanimoto_min": 0.35,
+      "nearest_train_tanimoto_edited_min": 0.3,
+      "nearest_train_tanimoto_edited_max": 0.95
+    },
+    "verifier_support": "count of XGBoost/RF target-distance improvements > 0.02",
+    "auxiliary_opposition": "count of XGBoost/RF target-distance improvements < -0.02",
+    "consensus_success": "edit_valid AND main improvement > 0.05 AND verifier support >= 1 AND opposition == 0",
+    "strict_success": "consensus_success AND target_window_success AND relaxed_guardrail_pass AND main_uncertainty <= 0.35",
+    "composite_weights": {
+      "clipped_main_improvement": 0.3,
+      "target_window": 0.35,
+      "verifier_support": 0.1,
+      "guardrail": 0.12,
+      "uncertainty": 0.05,
+      "parent_similarity": 0.04,
+      "in_domain": 0.04
+    }
+  },
+  "fixed_final_slot_selection": {
+    "budget_name": "B5",
+    "slots": 5,
+    "pool_unit": [
+      "mol_id",
+      "method_label",
+      "matching_seed"
+    ],
+    "eligibility": "Phase10-D evidence_ready is TRUE",
+    "fallback_when_no_evidence_ready": false,
+    "sort_priority": [
+      "target_window_success descending",
+      "relaxed_guardrail_pass descending",
+      "auxiliary_opposition_count ascending",
+      "final_edit_score descending",
+      "a05_candidate_attempt_id ascending deterministic tie-break"
+    ],
+    "selection": "first five eligible unique candidate identities",
+    "missing_slots": "remain missing; never backfilled by ineligible candidates",
+    "binary_endpoint_denominator": 5
+  },
+  "endpoints": {
+    "primary": [
+      "parent-level target-window hit rate over fixed B5 slots",
+      "parent-level strict-success rate over fixed B5 slots",
+      "parent-level mean target-distance improvement among observed selected slots"
+    ],
+    "secondary": [
+      "selected-candidate target-window success",
+      "selected-candidate strict success",
+      "selected-candidate final composite score"
+    ],
+    "missing_binary_slots": "zero successes and retained in denominator B5",
+    "missing_continuous_slots": "not numerically imputed; report observed-slot count and NA if zero observed slots",
+    "no_unregistered_endpoints": true
+  },
+  "paired_inference": {
+    "contrast": "treated minus matched control",
+    "seed_handling": "compute treated/control endpoint within each parent and seed, compute paired seed-specific effect, then average all five seed-specific effects within parent",
+    "seeds_are_independent_observations": false,
+    "primary_statistical_unit": "parent",
+    "region_is_primary_statistical_unit": false,
+    "population_estimate": "unweighted mean of the 65 parent-level five-seed-average paired effects",
+    "bootstrap": {
+      "unit": "parent",
+      "replicates": 5000,
+      "seed": 20260703,
+      "interval": "percentile",
+      "lower_percentile": 2.5,
+      "upper_percentile": 97.5,
+      "retain_all_five_seeds_when_parent_resampled": true
+    }
+  },
+  "execution_prohibitions_during_step9b": {
+    "read_step8_prediction_values": false,
+    "import_historical_modules": false,
+    "execute_historical_functions": false,
+    "compute_descriptors": false,
+    "compute_outcomes": false,
+    "rank_candidates": false,
+    "compare_treated_control": false,
+    "run_models": false
+  }
+}

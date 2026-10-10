@@ -1,0 +1,8 @@
+set_a,set_b,n_scaffolds_a,n_scaffolds_b,scaffold_overlap,must_be_zero_by_split_design,interpretation,pass
+scaffold_train,scaffold_valid,2326,23,0,True,split_integrity_check,True
+scaffold_train,scaffold_test,2326,40,0,True,split_integrity_check,True
+scaffold_valid,scaffold_test,23,40,0,True,split_integrity_check,True
+random_train,independent100,2002,93,38,False,descriptive_generalization_difficulty_only,True
+scaffold_train,independent100,2326,93,29,False,descriptive_generalization_difficulty_only,True
+scaffold_valid,independent100,23,93,6,False,descriptive_generalization_difficulty_only,True
+scaffold_test,independent100,40,93,5,False,descriptive_generalization_difficulty_only,True

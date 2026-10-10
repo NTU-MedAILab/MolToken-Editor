@@ -1,0 +1,98 @@
+{
+  "status": "pass",
+  "stage": "A05_FINAL",
+  "A05_status": "CLOSED",
+  "experiment": "Attribution-guided MolToken localization versus strict matched non-attribution controls",
+  "matching_universe": {
+    "parents": 90,
+    "primary_treated_regions": 178,
+    "strictly_matched_regions": 92,
+    "region_matching_coverage": 0.5168539325842697,
+    "matched_parents": 65,
+    "parent_matching_coverage": 0.7222222222222222,
+    "matching_seeds": 5,
+    "matched_pair_rows": 460,
+    "unique_controls_across_seeds": 165
+  },
+  "primary_outcome_analysis": {
+    "parents": 65,
+    "seeds_per_parent": 5,
+    "parent_seed_pairs": 325,
+    "B": 5,
+    "target_window": {
+      "treated": 0.7538461538461538,
+      "control": 0.6523076923076923,
+      "effect": 0.1015384615384615,
+      "effect_percentage_points": 10.15384615384615,
+      "ci95": [
+        0.0313846153846153,
+        0.1741692307692305
+      ],
+      "ci95_percentage_points": [
+        3.1384615384615304,
+        17.416923076923048
+      ]
+    },
+    "strict_success": {
+      "treated": 0.64,
+      "control": 0.579076923076923,
+      "effect": 0.0609230769230769,
+      "effect_percentage_points": 6.09230769230769,
+      "ci95": [
+        0.0055384615384615,
+        0.1212307692307692
+      ],
+      "ci95_percentage_points": [
+        0.55384615384615,
+        12.123076923076919
+      ]
+    }
+  },
+  "observed_only_sensitivity": {
+    "parents": 58,
+    "excluded_matched_parents": 7,
+    "undefined_parent_seed_method_cells": 48,
+    "numerical_imputation": false,
+    "selection_basis": "Frozen observation availability only; no outcome magnitude used.",
+    "target_distance_effect": 0.1159051883157471,
+    "target_distance_ci95": [
+      0.0459695408113534,
+      0.1990871730196435
+    ],
+    "final_edit_score_effect": 0.0571859405678161,
+    "final_edit_score_ci95": [
+      0.0214502845027644,
+      0.095920226276606
+    ]
+  },
+  "inference": {
+    "statistical_unit": "parent",
+    "bootstrap": "parent-level percentile",
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20260703,
+    "p_values_computed": false,
+    "candidate_level_inference": false
+  },
+  "interpretation_limits": {
+    "generalize_to_all_90_matching_parents": false,
+    "generalize_to_all_178_primary_regions": false,
+    "causal_claim_supported": false,
+    "wet_lab_validation": false,
+    "computational_validation": true
+  },
+  "manuscript_wording_corrected_after_estimability_clarification": true,
+  "models_rerun_during_synthesis": false,
+  "candidate_generation_rerun": false,
+  "candidate_rescoring_rerun": false,
+  "B5_selection_rerun": false,
+  "frozen_sources_modified": false,
+  "authoritative_manuscript_sources": [
+    "A05_final_claim_registry.csv",
+    "A05_final_analysis_scope.csv",
+    "A05_final_manuscript_results.csv",
+    "A05_final_manuscript_wording_bank.md",
+    "A05_final_limitation_registry.csv",
+    "A05_final_evidence_source_registry.csv"
+  ],
+  "next_stage": "MANUSCRIPT_SI_REVIEWER_RESPONSE_INTEGRATION"
+}

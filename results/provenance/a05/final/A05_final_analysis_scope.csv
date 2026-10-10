@@ -1,0 +1,13 @@
+item,value,interpretation
+matching_parent_universe,90.0,Parents containing frozen primary treated regions.
+treated_primary_regions,178.0,Primary attribution-selected physical regions.
+strictly_matched_treated_regions,92.0,Matched under all frozen structural/edit-opportunity calipers.
+region_match_coverage,0.5168539325842697,92 / 178 = 51.69%.
+matched_parents,65.0,Primary full-cohort outcome population.
+parent_match_coverage,0.7222222222222222,65 / 90 = 72.22%.
+matching_seeds,5.0,20260919-20260923.
+pair_rows,460.0,92 region pairs × five matching seeds.
+primary_parent_seed_pairs,325.0,65 parents × five seeds.
+sensitivity_parents,58.0,All-five-seed complete-observation parents.
+sensitivity_excluded_parents,7.0,Excluded only from observed-only sensitivity.
+undefined_observed_only_cells,48.0,Zero-filled B5 parent-seed-method cells.

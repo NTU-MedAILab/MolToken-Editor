@@ -1,0 +1,6 @@
+method_group,method,common_evaluable_starting_molecules,mean_retained_candidates,mean_delta_distance,target_window_success_percent,strict_success_percent,composite_edit_score
+moltoken_editor,MolToken-Editor,81,4.89,1.282,89.6,72.8,0.804
+brics_edit,BRICS,81,4.91,1.201,82.2,67.9,0.766
+recap_edit,RECAP,81,4.8,1.209,84.6,68.7,0.776
+rgroup_enumeration,Bemis–Murcko side-chain,81,4.89,1.228,77.3,64.6,0.754
+random_action_matched,Action-matched random,81,4.72,1.121,76.4,62.7,0.734

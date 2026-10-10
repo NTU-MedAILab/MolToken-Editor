@@ -1,0 +1,103 @@
+{
+  "status": "pass",
+  "stage": "A05_STEP11_V2_FINAL",
+  "step11_v2_status": "CLOSED",
+  "analysis_question": "Does attribution-guided MolToken localization retain an optimization advantage over structurally and edit-opportunity matched non-attribution control regions?",
+  "contrast": "treated_minus_control",
+  "primary_statistical_unit": "parent",
+  "primary_full_cohort": {
+    "parents": 65,
+    "seeds_per_parent": 5,
+    "parent_seed_pairs": 325,
+    "target_window_hit_rate_B5": {
+      "treated": 0.7538461538461538,
+      "control": 0.6523076923076923,
+      "effect": 0.1015384615384615,
+      "effect_percentage_points": 10.15384615384615,
+      "ci95_low": 0.0313846153846153,
+      "ci95_high": 0.1741692307692305,
+      "ci95_percentage_points": [
+        3.1384615384615304,
+        17.416923076923048
+      ]
+    },
+    "strict_success_rate_B5": {
+      "treated": 0.64,
+      "control": 0.579076923076923,
+      "effect": 0.0609230769230769,
+      "effect_percentage_points": 6.09230769230769,
+      "ci95_low": 0.0055384615384615,
+      "ci95_high": 0.1212307692307692,
+      "ci95_percentage_points": [
+        0.55384615384615,
+        12.123076923076919
+      ]
+    }
+  },
+  "complete_observation_sensitivity": {
+    "parents": 58,
+    "excluded_parents": 7,
+    "seeds_per_parent": 5,
+    "parent_seed_pairs": 290,
+    "cohort_selected_from": "frozen observed-availability only; no effect magnitude",
+    "mean_target_distance_improvement_observed": {
+      "treated": 1.323665597161207,
+      "control": 1.20776040884546,
+      "effect": 0.1159051883157471,
+      "ci95_low": 0.0459695408113534,
+      "ci95_high": 0.1990871730196435,
+      "reporting_status": "complete-observation sensitivity only; not full-cohort primary inference"
+    },
+    "mean_final_edit_score_observed": {
+      "treated": 0.7896358537816309,
+      "control": 0.7324499132138149,
+      "effect": 0.0571859405678161,
+      "ci95_low": 0.0214502845027644,
+      "ci95_high": 0.095920226276606,
+      "reporting_status": "complete-observation sensitivity/descriptive"
+    }
+  },
+  "bootstrap": {
+    "unit": "parent",
+    "replicates": 5000,
+    "seed": 20260703,
+    "interval": "percentile 2.5%-97.5%",
+    "p_values": "not computed"
+  },
+  "independent_recalculation": {
+    "status": "PASS",
+    "recomputed_from_raw_B5_slots": true,
+    "B5_rows": 3250,
+    "step10_metrics_exactly_reconstructed": true,
+    "primary_parent_effects_reconstructed": true,
+    "sensitivity_parent_effects_reconstructed": true,
+    "complete58_roster_reconstructed": true,
+    "bootstrap_values_reconstructed": true,
+    "summary_values_reconstructed": true,
+    "treated_minus_control_verified": true
+  },
+  "missing_data_policy": {
+    "observed_only_nan_imputation": false,
+    "individual_seed_dropping": false,
+    "full_cohort_distance_endpoint_status": "NOT_ESTIMABLE",
+    "sensitivity_analysis_used": true
+  },
+  "candidate_level_inference": false,
+  "models_run_in_step11": false,
+  "candidates_rescored": false,
+  "B5_selection_rerun": false,
+  "step9b_modified": false,
+  "step10_modified": false,
+  "clarification_modified": false,
+  "source_hashes": {
+    "step11_v2_build_audit": "6f7d8507b51490e88a78993388b8d8fe946f3ce189022e272bc526be3ce6f81d",
+    "independent_recalc_audit": "85fdcc24cd23731c3c8e867d8e874df265959c62547413fa2af428dff768b7fe",
+    "primary_summary": "7a461a805c0cb71805299fe2601da81d74a94b6b246a47bbe3443e2f9200ddce",
+    "primary_parent_effects": "4042fe9fdfce73ea42782920a6e2d4268ed3e6a55f25f2340ce5a65bd0bd9514",
+    "sensitivity_summary": "f22602271febdeb2eb13ed22039f85c15a145eb1cc1bbc643996ee7b4ecb4a39",
+    "sensitivity_parent_effects": "ca8ea85c433a51f6875dace087018e6cbcf9c6824907a5908dc6b0d73d2d964d",
+    "complete58_roster": "f690414a30f57ab9cc1ad2dd9f2a655211e05410563faa1224145646ae61b0d6",
+    "incomplete7_roster": "f524e13642bc0f4ea8e948fd57bbeb2a9e36f6863bf9325e084401d7889bbbf9"
+  },
+  "next_stage": "A05_FINAL_EVIDENCE_SYNTHESIS_AND_MANUSCRIPT_INTEGRATION"
+}

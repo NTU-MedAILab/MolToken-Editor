@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "stage": "A02",
+  "issue": "MMP 66.29% versus 67.04% inconsistency",
+  "final_overall_parent_target_percent": 66.29,
+  "final_overall_parent_target_sd_percent": 4.59,
+  "final_increase_parent_target_percent": 71.21,
+  "final_increase_parent_target_sd_percent": 6.6,
+  "final_decrease_parent_target_percent": 51.52,
+  "final_decrease_parent_target_sd_percent": 5.25,
+  "superseded_values": [
+    "67.04%",
+    "72.21% ± 6.60%"
+  ],
+  "seed_target_hits": {
+    "20260703": "59/88",
+    "20260704": "54/88",
+    "20260705": "62/88"
+  },
+  "A01_modified": false,
+  "model_rerun": false,
+  "candidate_generation": false,
+  "manuscript_sync_required": "Replace any remaining Table S1 72.21 ± 6.60 with 71.21 ± 6.60; replace any remaining 67.04 with 66.29."
+}

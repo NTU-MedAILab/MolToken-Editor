@@ -1,0 +1,5 @@
+item_id,location,old_or_current_value,final_value,action,reason
+A02_MMP_01,Main manuscript Abstract / Section 3.4 / Figure 3,66.29% ± 4.59%,66.29% ± 4.59%,KEEP,"Exactly reproduced from three MMP seeds: 59/88, 54/88, and 62/88 parent target hits."
+A02_MMP_02,Direction-stratified Table S1; MMP-Transformer / increase-logD / starting-molecule-level evidence-qualified target hit,72.21% ± 6.60%,71.21% ± 6.60%,REPLACE_IF_PRESENT,Final frozen direction-stratified mean is 0.7121212121 across 66 increase-logD parents.
+A02_MMP_03,Any manuscript/SI derived overall MMP target-hit claim,67.04%,66.29%,REPLACE_IF_PRESENT,67.04% is the 66:22 weighted result of the superseded direction-table values 72.21% and 51.52%.
+A02_MMP_04,MMP-Transformer / decrease-logD / starting-molecule-level evidence-qualified target hit,51.52% ± 5.25%,51.52% ± 5.25%,KEEP,Consistent with frozen final direction table: 0.5151515152 across 22 decrease-logD parents.

@@ -1,0 +1,7 @@
+limitation_id,issue,fact,reporting_requirement
+A05_LIM_01,Region matching coverage,92 of 178 primary treated regions were strictly matchable.,Always report the 51.69% matching coverage.
+A05_LIM_02,Parent coverage,65 of 90 matching-universe parents entered outcome inference.,Do not describe the result as applying to all 90 parents.
+A05_LIM_03,Observed-only endpoint estimability,48 parent-seed-method cells had zero filled selected candidate slots.,No zero imputation; distance and score results are 58-parent sensitivity analyses.
+A05_LIM_04,Inferential unit,Parent is the statistical inference unit.,"Do not treat seeds, regions, or candidate molecules as independent replicates."
+A05_LIM_05,Causal interpretation,Matched observational computational comparison.,"Avoid causal wording such as proves, causes, or guarantees."
+A05_LIM_06,Experimental validation,No synthesis or experimental logD measurement was performed.,Describe the evidence as computational validation.

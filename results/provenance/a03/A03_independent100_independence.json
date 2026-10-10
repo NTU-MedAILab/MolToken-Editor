@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "holdout_population": 100,
+  "manifest_selection_stage": "pre_training_holdout_reservation",
+  "historical_exact_selected_at": "not_available",
+  "descriptor_models": "fit only on X_by_split['train']; model ranking uses validation split only; independent_100 is prediction/evaluation only",
+  "verifier_models": "fit only on train split; independent_100 features are generated for post-fit prediction only; best_valid uses validation rows",
+  "chemprop_main": "training command receives only train, valid, and test paths; independent_100 is not passed to Chemprop train",
+  "chemprop_collection": "independent_100 is passed only to the post-training prediction/result collector",
+  "conclusion": "Independent-100 exclusion from model fitting and validation-based model selection is supported by the frozen workflow code. No historical reservation timestamp is asserted."
+}

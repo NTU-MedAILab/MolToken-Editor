@@ -1,0 +1,86 @@
+{
+  "status": "pass",
+  "stage": "A03",
+  "scope": "Dataset lineage, set membership, leakage audit, independent-100 holdout audit, and external-library 9000→7618→7024 provenance.",
+  "predictor_dataset": {
+    "clean_rows": 4200,
+    "random_split": {
+      "train": 3280,
+      "valid": 410,
+      "test": 410,
+      "independent_holdout": 100
+    },
+    "scaffold_split_after_holdout_exclusion": {
+      "population": 4100,
+      "train": 3252,
+      "valid": 413,
+      "test": 435
+    }
+  },
+  "external_library": {
+    "raw_rows": 9000,
+    "raw_nonblank_standardized_smiles_rows": 8955,
+    "raw_missing_standardized_smiles_rows": 45,
+    "raw_unique_standardized_smiles": 8948,
+    "raw_duplicate_nonblank_rows": 7,
+    "raw_filter_pass_rows": 7621,
+    "raw_filter_pass_unique_structures": 7618,
+    "filtered_unique_structures": 7618,
+    "phase10_parent_candidates": 7024,
+    "phase10_excluded_from_filtered": 594,
+    "raw_filter_identity_exact": true,
+    "phase10_candidate_rule_replay_exact": true
+  },
+  "external_parent_sets": {
+    "development_parent_120": 120,
+    "localization_parent_90": 90,
+    "common_evaluable_81": 81,
+    "external_baseline_exact88": 88,
+    "90_subset_120": true,
+    "81_subset_90": true,
+    "88_subset_90": true,
+    "81_intersection_88": 79
+  },
+  "exact_structure_leakage": "none_detected_in_audited_pairs",
+  "scaffold_split_internal_overlap": 0,
+  "independent100": {
+    "n": 100,
+    "selection_stage": "pre_training_holdout_reservation",
+    "historical_exact_selected_at": "not_available",
+    "model_fitting_exclusion": "supported_by_frozen_training_code",
+    "validation_model_selection_exclusion": "supported_by_frozen_training_code",
+    "metrics": [
+      {
+        "split_type": "random",
+        "n": 100,
+        "rmse": 0.6161886835808263,
+        "mae": 0.48790789677,
+        "r2": 0.835874623114841,
+        "spearman": 0.9022861451286996,
+        "region_balanced_accuracy": 0.7083333333333334,
+        "region_macro_f1": 0.6903747839199678,
+        "mean_pred_std": 0.1479903016819632,
+        "mean_nearest_train_tanimoto": 0.6157786210485408
+      },
+      {
+        "split_type": "scaffold",
+        "n": 100,
+        "rmse": 0.6041754199843375,
+        "mae": 0.480455689614,
+        "r2": 0.8422118423418531,
+        "spearman": 0.8926482849800039,
+        "region_balanced_accuracy": 0.7138888888888889,
+        "region_macro_f1": 0.6883116883116883,
+        "mean_pred_std": 0.1570175791278211,
+        "mean_nearest_train_tanimoto": 0.5890925565569685
+      }
+    ]
+  },
+  "A01_modified": false,
+  "dataset_modified": false,
+  "model_retrained": false,
+  "prediction_rerun": false,
+  "source_snapshots": 21,
+  "source_snapshot_hash_match": true,
+  "decision": "CLOSED / PASS"
+}

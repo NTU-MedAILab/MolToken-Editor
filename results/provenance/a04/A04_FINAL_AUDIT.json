@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "stage": "A04",
+  "decision": "CLOSED / PASS",
+  "scope": "Audit of external Exact88 search effort, final B=5 evaluation-slot accounting, historical model-call/runtime availability, and permissible manuscript budget claims.",
+  "benchmark": {
+    "starting_molecules": 88,
+    "benchmark_scope": "external_exact88",
+    "requested_final_slots_per_parent": 5,
+    "requested_final_slots_per_method_seed": 440,
+    "missing_slots_count_as_failures": true
+  },
+  "archived_raw_attempt_rows": {
+    "moltoken_editor_deterministic": 4360,
+    "mmp_20260703": 4400,
+    "mmp_20260704": 3610,
+    "mmp_20260705": 3577,
+    "reinvent4_20260703": 4400,
+    "reinvent4_20260704": 4400,
+    "reinvent4_20260705": 4400
+  },
+  "final_slot_accounting": {
+    "moltoken_editor": "440/440",
+    "mmp_all_three_seeds": "440/440 each",
+    "reinvent4_20260703": "440/440",
+    "reinvent4_20260704": "440/440",
+    "reinvent4_20260705": "438/440",
+    "missing_slot_case": {
+      "mol_id": "EXT_02162",
+      "seed": "20260705",
+      "missing_slots": [
+        4,
+        5
+      ]
+    }
+  },
+  "historical_cost_evidence": {
+    "complete_main_model_calls": false,
+    "complete_aux_model_calls": false,
+    "complete_native_model_calls": false,
+    "complete_cross_method_runtime": false,
+    "reinvent_native_generation_wall_seconds": {
+      "20260703": 945.574259,
+      "20260704": 944.56179,
+      "20260705": 917.07938
+    }
+  },
+  "scientific_interpretation": {
+    "whole_process_equal_budget_supported": false,
+    "whole_process_efficiency_claim_supported": false,
+    "cumulative_shared_call_curve_reconstructable": false,
+    "supported_primary_label": "fixed final evaluation-slot comparison (B=5)",
+    "candidate_denominator": "five requested final evaluation slots per starting molecule; unavailable slots remain in the denominator and count as zero successes"
+  },
+  "moltoken_8720_double_count": {
+    "resolved": true,
+    "correct_external_exact88_attempt_rows": 4360
+  },
+  "audit_files": 19,
+  "source_snapshots": 5,
+  "source_snapshot_hash_match": true,
+  "model_run": false,
+  "candidate_generation": false,
+  "posthoc_shared_scoring": false,
+  "A01_modified": false
+}

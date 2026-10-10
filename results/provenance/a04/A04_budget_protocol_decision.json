@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "external_benchmark_scope": "external_exact88",
+  "exact88_parents": 88,
+  "final_slots_per_parent": 5,
+  "requested_final_slots_per_method_seed": 440,
+  "missing_slots_count_as_failures": true,
+  "missing_slot_case": {
+    "method": "reinvent4_mol2mol",
+    "seed": "20260705",
+    "mol_id": "EXT_02162",
+    "missing_slots": [
+      4,
+      5
+    ]
+  },
+  "moltoken_double_count_resolved": true,
+  "moltoken_external_scope_raw_attempt_rows": 4360,
+  "raw_attempt_counts_equal_across_methods": false,
+  "complete_main_aux_native_call_counts": false,
+  "complete_cross_method_runtime": false,
+  "reinvent_native_generation_wall_seconds": {
+    "20260703": 945.574259,
+    "20260704": 944.56179,
+    "20260705": 917.07938
+  },
+  "reinvent_native_generation_wall_mean_seconds": 935.7384763333333,
+  "reinvent_native_generation_wall_sd_seconds": 16.167179109277214,
+  "shared_endpoint_scored_for_all_raw_attempts": false,
+  "success_vs_cumulative_shared_calls_curve_reconstructable_from_existing_history": false,
+  "whole_process_equal_budget_supported": false,
+  "whole_process_efficiency_claim_supported": false,
+  "supported_primary_description": "fixed final evaluation-slot comparison (B=5)",
+  "supported_candidate_denominator_description": "Five requested final evaluation slots per starting molecule; unavailable slots are retained in the denominator and count as zero successes.",
+  "interpretation": "The archived experiment supports a common final evaluation-slot protocol, not a common whole-process computational budget. Raw search effort differs between methods/seeds, complete main/aux/native model-call counts were not historically logged, and only REINVENT4 has direct native-generation wall-time records. The shared property endpoint was archived only for the final locked layer, so a cumulative shared-call success curve cannot be reconstructed without new post hoc scoring.",
+  "new_model_run": false,
+  "new_candidate_generation": false,
+  "new_posthoc_shared_scoring": false
+}

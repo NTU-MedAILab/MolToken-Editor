@@ -1,0 +1,6 @@
+seed,treated_regions,initially_matchable_regions,matched_regions_after_no_replacement,unmatched_regions,region_match_coverage,parents,parents_with_any_match,parents_with_all_treated_regions_matched,parents_with_zero_matches,unique_controls_used
+20260919,178,96,92,86,0.5168539325842697,90,65,28,25,92
+20260920,178,96,92,86,0.5168539325842697,90,65,28,25,92
+20260921,178,96,92,86,0.5168539325842697,90,65,28,25,92
+20260922,178,96,92,86,0.5168539325842697,90,65,28,25,92
+20260923,178,96,92,86,0.5168539325842697,90,65,28,25,92
