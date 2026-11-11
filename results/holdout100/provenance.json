@@ -1,0 +1,34 @@
+{
+  "source_archive_sha256": "58ca231d2454a650435a8f515f74e9b55492aff23695030f0331145f51c02034",
+  "frozen_roster_sha256": "472a93c926c0df66d2fd4b0406ce8c3efeb940326d82fdf7f96ebe4b393adb4a",
+  "split_labels": [
+    "random",
+    "scaffold"
+  ],
+  "model_ids": [
+    "dmpnn_rdkit2d",
+    "xgboost",
+    "random_forest"
+  ],
+  "training_seeds": [
+    20260528,
+    20260529,
+    20260530,
+    20260531,
+    20260601
+  ],
+  "class_thresholds": {
+    "low": "logD < 1.0",
+    "in_range": "1.0 <= logD <= 3.4",
+    "high": "logD > 3.4"
+  },
+  "metrics_basis": "Metrics computed from five-seed ensemble mean predictions on the same 100 measured molecules.",
+  "sha256": {
+    "independent_100_chemprop_ensemble.csv": "eb4ebb6c776be5b00e55cfd971945630af770d767db46e284200b5b8bfab4a35",
+    "independent_100_chemprop_seed_predictions.csv": "b560aad8b8dccc2946c736559ad9416f7b4e6e7094323ea1ce35edb5be950446",
+    "independent_100_verifier_ensemble.csv": "cecd2fb94e10263f12402813755a8df30545ec2a8eb4e8c0ea85db4513746899",
+    "independent_100_verifier_seed_predictions.csv": "1d14ee7f2c58669b4ff0dffe8bc70310a569ee405d37e097f704ed706e721dab",
+    "metrics.csv": "5eac5c0f5bbcf30165c19e86790d90ae239bc11871543f859cc09f709fca711f",
+    "class_recall.csv": "f8ba74521debc96f1ba7f77fb60bfb28d8eaafb4d4be1232ade86384fd6559f3"
+  }
+}

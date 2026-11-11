@@ -1,0 +1,157 @@
+{
+  "manuscript_table": "Supplementary Table S2",
+  "starting_molecule_ids": [
+    "EXT_00121",
+    "EXT_00129",
+    "EXT_00171",
+    "EXT_00206",
+    "EXT_00221",
+    "EXT_00497",
+    "EXT_00505",
+    "EXT_00876",
+    "EXT_00917",
+    "EXT_01202",
+    "EXT_01330",
+    "EXT_01365",
+    "EXT_01490",
+    "EXT_01491",
+    "EXT_01599",
+    "EXT_01675",
+    "EXT_01703",
+    "EXT_01882",
+    "EXT_01894",
+    "EXT_01948",
+    "EXT_01961",
+    "EXT_01962",
+    "EXT_01980",
+    "EXT_01990",
+    "EXT_01993",
+    "EXT_02162",
+    "EXT_02191",
+    "EXT_02273",
+    "EXT_02279",
+    "EXT_02359",
+    "EXT_02392",
+    "EXT_02468",
+    "EXT_02766",
+    "EXT_02903",
+    "EXT_02948",
+    "EXT_03430",
+    "EXT_03588",
+    "EXT_03635",
+    "EXT_03688",
+    "EXT_03710",
+    "EXT_03732",
+    "EXT_03753",
+    "EXT_03797",
+    "EXT_03804",
+    "EXT_03807",
+    "EXT_03808",
+    "EXT_03869",
+    "EXT_04049",
+    "EXT_04051",
+    "EXT_04052",
+    "EXT_04071",
+    "EXT_04199",
+    "EXT_04207",
+    "EXT_04208",
+    "EXT_04325",
+    "EXT_04327",
+    "EXT_04334",
+    "EXT_04335",
+    "EXT_04336",
+    "EXT_04343",
+    "EXT_04344",
+    "EXT_04361",
+    "EXT_04370",
+    "EXT_04404",
+    "EXT_04477",
+    "EXT_04481",
+    "EXT_04687",
+    "EXT_04720",
+    "EXT_04727",
+    "EXT_04823",
+    "EXT_04904",
+    "EXT_05282",
+    "EXT_05398",
+    "EXT_05455",
+    "EXT_05464",
+    "EXT_05504",
+    "EXT_05966",
+    "EXT_06185",
+    "EXT_06261",
+    "EXT_06563",
+    "EXT_06829",
+    "EXT_07426",
+    "EXT_07570",
+    "EXT_07589",
+    "EXT_07590",
+    "EXT_07593",
+    "EXT_07595",
+    "EXT_07597"
+  ],
+  "generation_attempt_units": {
+    "MolToken-Editor": "Returned deletion, replacement-orientation, and addition records. Deletion records reuse localization counterfactuals.",
+    "MMP-Transformer": "Sequences attempted by the native decoder.",
+    "REINVENT4": "Raw sampled sequences, including repeats."
+  },
+  "model_molecule_input_unit": "One molecular input row processed by one property model. Counted in the recorded localization, internal oracle and candidate-scoring stages where applicable. Cache hits without new model evaluation do not add records.",
+  "candidate_rate_denominator": "Filled slots in each run. Maximum five per starting molecule.",
+  "seed_summary": "Arithmetic mean and sample standard deviation across the three baseline seeds.",
+  "sources": {
+    "moltoken_cost_stage1": {
+      "archive": "original88_moltoken_cost_stage1_evidence_1793973177030948887.zip",
+      "sha256": "be9d44367bd337883f0148b9b964e42bdac033e3d7052b3bd54864cf9a502a6e",
+      "members": {
+        "stage1_cost_ledger.json": "53a6abbd4cf0dca61028b3379c03cb95b364d54854ce2586c4998321375e06ba",
+        "original88_reference.csv": "bdac85a2a8bc211dddb73d567f07e8b2983a9744b87d118eb4cbda3d431658a9"
+      }
+    },
+    "moltoken_cost_stage2": {
+      "archive": "original88_moltoken_cost_stage2_evidence_1794021657985656696.zip",
+      "sha256": "d54d37f0ece4a332931e699d33d8b9b816e8137b2be72e84f0a7c089850814dc",
+      "members": {
+        "cost_ledger.json": "7527d9d5415750825186f00149035270ff1a795a105c6594b62f9b5e48e71008",
+        "stages/gates/attempt_n8kmueq4/selected440_scored.csv": "7a834a61cbe9c457e86891739ca1d02e1478e5ec3d7eb4cf9761d297de36a5b3"
+      }
+    },
+    "mmp_generation_cost": {
+      "archive": "original88_mmp_generation_cost_evidence_1794028742554946962.zip",
+      "sha256": "05e409cd80baa7a94d4dd8ebf14614d1fc691b3d22fd3fe418ce689b9b171edf",
+      "members": {
+        "cost_ledger.json": "73d8a9081867df4a2d9b5d75a1cc32f3d4961ea3efc88f43bc37cd0a7157e5a1"
+      }
+    },
+    "mmp_scoring_cost": {
+      "archive": "original88_mmp_scoring_cost_evidence_1794048217479427393.zip",
+      "sha256": "9789bc877a77c3d23378193dafe92f9090bddf7e380323e2c0bba6941a34a296",
+      "members": {
+        "scoring_cost_ledger.json": "f530ad06b4ce9c0cfdfb3930eff51f0566f3c315405b24ef2a2595246c83cd37",
+        "seed_20260703/attempt_0fvv6z2o/selected440_scored.csv": "4f0d00ad1442667e55857ef0910e41b815f301c019fb04dd00688f76a55d1d5a",
+        "seed_20260704/attempt_ac1q589b/selected440_scored.csv": "3411db105113b1dc4bea228cffd22726e9e4f1572b7b38a3fb21ac829e290f2e",
+        "seed_20260705/attempt_f4w5xc0a/selected440_scored.csv": "3e0fd99cad3ba8fc4ecf72054700fd2ad6e07fcf164cb9c1e9e3a466c119da25"
+      }
+    },
+    "reinvent_generation_cost10": {
+      "archive": "original88_reinvent_generation_cost10_evidence_1794065245734902945.zip",
+      "sha256": "16fb1d77497aa3a668014bd655945316ee9b2b93d431edadc29431f84a1deee3",
+      "members": {
+        "cost_ledger.json": "2cd969216a2643d05a28f47ba7cc0de4ed4688012202fdba7d1f008dd94f8bc6"
+      }
+    },
+    "reinvent_scoring_cost": {
+      "archive": "original88_reinvent_scoring_cost_evidence_1794128401537347416.zip",
+      "sha256": "871fd00e734b14b033d0146152700e21c4495dbfdd4776146455af1df2becbe7",
+      "members": {
+        "scoring_cost_ledger.json": "d7d420bbf01bf9ef4bc00f0d6d5c8c576db6d2e59ad548bc56e3d369280d3aa2",
+        "seed_20260703/attempt_a72oyqby/selected_b5_scored.csv": "ef36e1e1a47aeb7b20cd106fea13f0b832431d7f69bbf120cbac793f185de7ab",
+        "seed_20260704/attempt_3yj4gxw0/selected_b5_scored.csv": "55a790082d12f422975fa50b25b165fdf8125a8f1f399abcd10d417c6c4b1d2b",
+        "seed_20260705/attempt_czxko97_/selected_b5_scored.csv": "07fc2c32a4ed402fefbceb3a4a52331f598b8ef0ff172507bc14570fd027ea45"
+      }
+    }
+  },
+  "released_file_sha256": {
+    "locked_candidate_guardrails.csv": "79e8cc2e2d90f822b73e61f42b08c19d314871343181d3806f0b4174df81f4b4",
+    "run_costs.csv": "98caf1652b16e2110f74c07d7ef93f5a0b32efe82892d8f409238e79f9db5e89"
+  }
+}

@@ -1,0 +1,8 @@
+method,run_id,generation_attempts,localization_model_molecule_records,native_oracle_model_molecule_records,candidate_scoring_model_molecule_records
+MolToken-Editor,deterministic,4360,85830,0,92160
+MMP-Transformer,20260703,8516,0,0,108270
+MMP-Transformer,20260704,8463,0,0,108300
+MMP-Transformer,20260705,8511,0,0,107310
+REINVENT4,20260703,4400,0,17030,52230
+REINVENT4,20260704,4400,0,19620,60210
+REINVENT4,20260705,4400,0,19700,60750
