@@ -139,6 +139,14 @@ candidate counts. Fresh retraining is a conclusion-level replication, while
 Generated checkpoints, predictions, logs, and intermediate tables are ignored
 by Git and must not overwrite the locked files under `results/`.
 
+## Holdout-set evaluation
+
+Table S1 is calculated from frozen ensemble predictions for 100 molecules with measured logD. The predictions and metric summaries are in [`results/holdout100/`](results/holdout100/).
+
+```bash
+python workflows/predictors/scripts/recalculate_holdout100.py
+```
+
 ## External baselines
 
 The locked candidate tables needed to recalculate the reported comparison are
@@ -157,29 +165,4 @@ The method-specific adapters and setup scripts are under
 Under the fixed final evaluation-slot protocol, five slots are requested per
 starting molecule (B=5) on the common Exact88 set. The starting-molecule-level evidence-qualified target hit rates were 79.55% for MolToken-Editor, 52.65% ± 8.83% for REINVENT4, and 66.29% ± 4.59% for MMP-Transformer. Unavailable slots remain in
 the fixed denominator and count as unsuccessful. This protocol normalizes the
-final requested evaluation slots; it does not establish equal whole-process
-search effort, model-call counts, or runtime. See
-`results/manuscript_tables/equal_budget_comparison.csv` for all endpoints.
-
-## Attribution-matched control
-
-The added A05 analysis compares attribution-guided MolToken localization with
-strictly matched non-attribution controls. The matching universe contained 178
-attribution-selected regions from 90 parents. Across five matching seeds, 92
-regions were strictly matched, covering 65 parents.
-
-The 65-parent primary paired analysis estimated a target-window B=5 effect of
-+10.15 percentage points (95% CI, +3.14 to +17.42) and a strict-success effect
-of +6.09 percentage points (95% CI, +0.55 to +12.12). Target-distance and final
-edit-score endpoints are limited to a 58-parent complete-observation
-sensitivity analysis. Parent is the inferential unit. These computational
-results do not support causal or wet-lab claims.
-
-See `results/manuscript_tables/attribution_matched_control.csv` and the
-corresponding files under `results/figure_source_data/` and
-`results/provenance/a05/`.
-
-## Citation and license
-
-Citation metadata are provided in `CITATION.cff`. A project-level license must
-be selected before the repository is made public; see `LICENSE_NOTICE.md`.
+final requested evaluation 
