@@ -155,9 +155,7 @@ The method-specific adapters and setup scripts are under
 ## Locked comparison
 
 Under the fixed final evaluation-slot protocol, five slots are requested per
-starting molecule (B=5) on the common Exact88 set. The parent-level
-target-window hit rates were 79.55% for MolToken-Editor, 52.65% ± 8.83% for
-REINVENT4, and 66.29% ± 4.59% for MMP-Transformer. Unavailable slots remain in
+starting molecule (B=5) on the common Exact88 set. The starting-molecule-level evidence-qualified target hit rates were 79.55% for MolToken-Editor, 52.65% ± 8.83% for REINVENT4, and 66.29% ± 4.59% for MMP-Transformer. Unavailable slots remain in
 the fixed denominator and count as unsuccessful. This protocol normalizes the
 final requested evaluation slots; it does not establish equal whole-process
 search effort, model-call counts, or runtime. See
