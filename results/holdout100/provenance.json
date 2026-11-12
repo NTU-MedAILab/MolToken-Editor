@@ -1,0 +1,42 @@
+{
+  "source_archive_sha256": "eb8fa65e877199a25ce5c57a5b7cbdcaae25caf8a22cd82a6fe05118c33e7cf5",
+  "frozen_roster_sha256": "472a93c926c0df66d2fd4b0406ce8c3efeb940326d82fdf7f96ebe4b393adb4a",
+  "split_labels": [
+    "random",
+    "scaffold"
+  ],
+  "model_ids": [
+    "dmpnn_rdkit2d",
+    "xgboost",
+    "random_forest"
+  ],
+  "training_seeds": [
+    20260528,
+    20260529,
+    20260530,
+    20260531,
+    20260601
+  ],
+  "class_thresholds": {
+    "low": "logD < 1.0",
+    "in_range": "1.0 <= logD <= 3.4",
+    "high": "logD > 3.4"
+  },
+  "metrics_basis": "Metrics computed from five-seed ensemble mean predictions on the same 100 measured molecules.",
+  "sha256": {
+    "independent_100_chemprop_ensemble.csv": "326195eb78a1e93fa0a80b2425f374c60a1f7123a716c85ef040f3cf336d1ad9",
+    "independent_100_chemprop_seed_predictions.csv": "1dc8949dff011f91f9e690995825ccd93fa833e47d2275a38cc11739a9ccc53c",
+    "independent_100_verifier_ensemble.csv": "475b21258416779a7cc5397e88c5684b115c9ea3568a84efab07869827dc295b",
+    "independent_100_verifier_seed_predictions.csv": "ee35d068cbc64669e33bce2f3b4da6787692b2aa0e3e82fee1fcf303d11bb0c5",
+    "metrics.csv": "f947deb9b619a5339da5e37b0f52fc9911d1adfd4b3d05b78092c8174f1f7594",
+    "class_recall.csv": "337f18197e312e27c1f19f09e9d39371b51be86356ccdb059575996d11725198"
+  },
+  "prediction_source": "Archived Linux predictor-development workflow (04_predictor_upgrade).",
+  "primary_predictor_training_manifest_created_at": "2026-06-24T23:08:50",
+  "primary_predictor_prediction_summary_created_at": "2026-06-24T23:29:32",
+  "source_report_sha256": {
+    "chemprop_run_manifest.json": "303a206b784aca814f721b40545f4a7bb696bf2e0bed53077ef3509f9c2a64d8",
+    "chemprop_main_summary.json": "e51d6d82326bc45a76a98466f551864c8e40a21822abdb64709334b2b412d534",
+    "verifier_model_summary.json": "34b4ea5789617d2d5d17f736449c427018f550996be227077594e35d98d2d488"
+  }
+}
